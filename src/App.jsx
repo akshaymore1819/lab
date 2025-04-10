@@ -1,22 +1,25 @@
-import { useState } from 'react';
-import './App.css';
-import Home from "./Componants/Home";
-import Footer from "./Componants/Footer"
-import Home2 from "./Componants/Home2";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./Componants/Navbar";
-
+import Login from "./Componants/Login";
+import Home from "./Componants/Home";
+import Home2 from "./Componants/Home2";
+import Footer from "./Componants/Footer";
 
 function App() {
-  const [count, setCount] = useState(0); // Can be removed if unused
-
   return (
-    <div className="app">
-      <Navbar/>
-      <Home />
-   
-      <Home2/>
-      <Footer/>
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home2" element={<Home2 />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

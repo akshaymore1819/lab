@@ -1,0 +1,67 @@
+/* Login.css */
+.rl-login-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.rl-login-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  max-width: 450px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.rl-login-card:hover {
+  transform: translateY(-5px);
+}
+
+.rl-login-title {
+  text-align: center;
+  color: #1976d2;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.rl-login-submit {
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 16px;
+  background: linear-gradient(to right, #2196f3, #21cbf3);
+  color: white;
+  box-shadow: 0 4px 15px rgba(33, 203, 243, 0.4);
+  transition: background 0.3s ease;
+}
+
+.rl-login-submit:hover {
+  background: linear-gradient(to right, #1e88e5, #1de9b6);
+}
+
+.rl-login-otp-btn {
+  text-transform: none;
+}
+
+.rl-login-help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.rl-login-whatsapp {
+  color: #25D366 !important;
+  background-color: rgba(37, 211, 102, 0.1) !important;
+  transition: background 0.3s ease !important;
+}
+
+.rl-login-whatsapp:hover {
+  background-color: rgba(37, 211, 102, 0.2) !important;
+}

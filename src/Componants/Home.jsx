@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './Home.css';
+import Home2 from './Home2'
 
 const Home = () => {
   const [currentPackageSlide, setCurrentPackageSlide] = useState(0);
@@ -125,51 +126,7 @@ const Home = () => {
 
   return (
     <div className="redcliffe-app">
-      {/* Navbar */}
-      {/* <nav className="navbar fade-in">
-        <div className="navbar-top">
-          <span>Redcliffe Labs</span>
-          <div className="location-container" onClick={toggleLocationDropdown}>
-            <span className="location-label">Location ▼</span>
-            {isLocationDropdownOpen && (
-              <div className="location-dropdown">
-                {cities.map((city, index) => (
-                  <div key={index} className="city-item">{city}</div>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-        <div className="navbar-main">
-          <div className="menu-container">
-            <div className="menu" onClick={toggleMenu}>☰ Menu</div>
-            {isMenuOpen && (
-              <div className="dropdown-menu">
-                <a href="#">Lab Locations</a>
-                <a href="#">Help & Support</a>
-                <a href="#">Health Blog</a>
-                <a href="#">About Us</a>
-                <a href="#">Quality Assurance</a>
-                <a href="#">Partnership</a>
-                <a href="#">GeneCliffe</a>
-                <a href="#">Medical Coverage</a>
-              </div>
-            )}
-          </div>
-          <div className="search-box">
-            <span className="search-icon">🔍</span>
-            <input type="text" placeholder="Search Tests" />
-          </div>
-          <div className="nav-actions">
-            <button className="hover-grow">Upload Prescription</button>
-            <button className="hover-grow pulse">Book a Test</button>
-          </div>
-          <div className="nav-icons">
-            <span className="user-icon hover-grow">👤</span>
-            <span className="cart-icon hover-grow">🛒</span>
-          </div>
-        </div>
-      </nav> */}
+     
 
       {/* Hero Section */}
       <section className="hero slide-in">
@@ -312,6 +269,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Home2/>
     </div>
   );
 };

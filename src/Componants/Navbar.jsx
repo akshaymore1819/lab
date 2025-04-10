@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // ← Add this
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLocationDropdownOpen, setLocationDropdownOpen] = useState(false);
   const [selectedCity, setSelectedCity] = useState('Select Location');
+
+  const navigate = useNavigate(); // ← Add this
 
   const cities = ['Delhi', 'Mumbai', 'Bangalore', 'Hyderabad', 'Chennai', 'Kolkata'];
 
@@ -13,13 +17,17 @@ const Navbar = () => {
 
   const handleCitySelect = (city) => {
     setSelectedCity(city);
-    setLocationDropdownOpen(false);  // Close the dropdown after selecting a city
+    setLocationDropdownOpen(false);
+  };
+
+  const handleProfileClick = () => {
+    navigate('/login'); // ← Redirect to login page
   };
 
   return (
     <nav className="rl-navbar">
       <div className="rl-navbar-top">
-        <span className="rl-brand">Hospital Labs</span>
+        <Link to='/'><span className="rl-brand">Hospital Labs</span></Link>
         <div className="rl-location-container" onClick={toggleLocationDropdown}>
           <span className="rl-location-label">{selectedCity} ▼</span>
           {isLocationDropdownOpen && (
@@ -62,7 +70,7 @@ const Navbar = () => {
         </div>
 
         <div className="rl-nav-icons">
-          <span className="rl-user-icon rl-hover-grow">👤</span>
+        <Link to='/login'>  <span className="rl-user-icon rl-hover-grow" onClick={handleProfileClick}>👤</span></Link> {/* ← updated */}
           <span className="rl-cart-icon rl-hover-grow">🛒</span>
         </div>
       </div>

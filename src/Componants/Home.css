@@ -156,7 +156,7 @@
   border-radius: 4px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   z-index: 1000;
-  min-width: 250px;
+
   animation: fadeIn 0.3s ease-in-out;
   transform-origin: top center;
 }
@@ -193,7 +193,7 @@
   padding: 8px 15px;
   border-radius: 20px;
   flex-grow: 1;
-  max-width: 500px;
+
   transition: all 0.3s;
 }
 
@@ -286,8 +286,8 @@
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   z-index: 1000;
-  width: 250px;
-  max-height: 400px;
+
+
   overflow-y: auto;
   margin-top: 5px;
 }
@@ -350,7 +350,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .location-dropdown {
-    width: 200px;
+ 
     right: -20px;
   }
   
@@ -395,7 +395,7 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+ 
   margin: 0 auto;
   /* animation: float 6s ease-in-out infinite; */
 }
@@ -492,7 +492,7 @@
 
 .health-scroll-card {
   flex: 0 0 auto;
-  width: 180px;
+
   height: 130px;
   background: white;
   border-radius: 1rem;
@@ -846,7 +846,7 @@ All clean, all done
 
 .feature {
   flex: 1;
-  min-width: 300px;
+ 
   padding: 40px 30px;
   background: white;
   border-radius: 15px;
@@ -937,7 +937,7 @@ All clean, all done
 
 .womens-health .section-header p {
   color: rgba(255,255,255,0.9);
-  max-width: 800px;
+
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -1017,7 +1017,7 @@ All clean, all done
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  max-width: 1200px;
+
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -1025,7 +1025,7 @@ All clean, all done
 
 .testimonial-card {
   flex: 1;
-  min-width: 350px;
+ 
   padding: 40px 30px;
   background: white;
   border-radius: 15px;
@@ -1079,87 +1079,6 @@ All clean, all done
   font-size: 0.9rem;
 }
 
-/* Footer */
-.footer {
-  background: var(--dark-color);
-  color: white;
-  padding: 60px 20px 20px;
-  margin-top: auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1350') no-repeat center center;
-  background-size: cover;
-  opacity: 0.03;
-  z-index: 0;
-}
-
-.footer-top {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto 30px;
-  position: relative;
-  z-index: 1;
-}
-
-.footer-logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.footer-links, .footer-contact {
-  flex: 1;
-  min-width: 200px;
-}
-
-.footer-links h3, .footer-contact h3 {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  color: white;
-}
-
-.footer-links a {
-  display: block;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 10px;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.footer-links a:hover {
-  color: white;
-  transform: translateX(5px);
-}
-
-.footer-contact p {
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 20px;
-  text-align: center;
-  color: rgba(255,255,255,0.7);
-  font-size: 0.9rem;
-  position: relative;
-  z-index: 1;
-}
 
 .legal-links {
   margin-top: 15px;

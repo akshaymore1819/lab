@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+ 
 }
 
 body {
@@ -50,7 +50,7 @@ body {
   font-size: 14px;
   gap: 5px;
   position: absolute;
-  right: 1100px;
+  left: 300px;
 }
 
 .rl-location-label {
