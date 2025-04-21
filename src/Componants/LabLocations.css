@@ -1,0 +1,74 @@
+.locations-page {
+  padding: 40px 20px;
+  /* background: linear-gradient(to bottom right, #f7f9fc, #eef2f7); */
+  background: var(--gradient-secondary);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+.lab-card {
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.lab-card:hover {
+  transform: translateY(-8px);
+}
+
+.lab-card h3 {
+  font-size: 1.2rem;
+  color: #1f2d3d;
+  margin-bottom: 10px;
+}
+
+.lab-card p {
+  font-size: 0.95rem;
+  color: #34495e;
+  margin-bottom: 8px;
+}
+
+.city {
+  color: #2980b9;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.lab-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lab-buttons button {
+  flex: 1;
+  padding: 8px 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.lab-buttons button:hover {
+  background-color: #2980b9;
+} 

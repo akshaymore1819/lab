@@ -47,14 +47,14 @@ const Navbar = () => {
           <div className="rl-menu" onClick={toggleMenu}>☰ Menu</div>
           {isMenuOpen && (
             <div className="rl-dropdown-menu">
-              <a href="#">Lab Locations</a>
-              <a href="#">Help & Support</a>
-              <a href="#">Health Blog</a>
-              <a href="#">About Us</a>
-              <a href="#">Quality Assurance</a>
-              <a href="#">Partnership</a>
-              <a href="#">GeneCliffe</a>
-              <a href="#">Medical Coverage</a>
+              <Link to='/lablocations'>Lab Locations</Link>
+              <Link to='/helpsupport'>Help & Support</Link>
+              <Link to='/healthblog'>Health Blog</Link>
+              <Link to='/aboutus'>About Us</Link>
+              <Link to='/quality'>Quality Assurance</Link>
+              <Link to='/partnership'>Partnership</Link>
+              <Link to='/gencliffe'>GeneCliffe</Link>
+              <Link to='/coverage'>Medical Coverage</Link>
             </div>
           )}
         </div>

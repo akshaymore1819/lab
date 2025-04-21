@@ -1,99 +1,46 @@
-/* Home.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Home2.css */
 
-/* General Styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
 
-.home-page {
- 
-  margin: 0 auto;
-  padding: 20px;
-}
 
-h1, h2, h3, h4 {
-  margin: 0;
-  font-weight: 600;
-}
-
-section {
-  padding: 60px 20px;
-  margin-bottom: 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  background: white;
-}
-
-/* Animation Classes */
-.animate-on-scroll {
+.home2-animate-on-scroll {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+ 
 }
 
-.animate-on-scroll.animate {
+.home2-animate-on-scroll.home2-animate {
   opacity: 1;
-  transform: translateY(0);
+
 }
 
-.hover-float {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-float:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.hover-grow {
+.home2-hover-grow {
   transition: transform 0.3s ease;
 }
 
-.hover-grow:hover {
+.home2-hover-grow:hover {
   transform: scale(1.05);
 }
 
-.hover-rotate:hover {
+.home2-hover-rotate:hover {
   transform: rotate(5deg);
 }
 
-.pulse {
-  animation: pulse 2s infinite;
+.home2-pulse {
+  animation: home2-pulse 2s infinite;
 }
 
-.underline-animate {
-  position: relative;
-}
-
-.underline-animate:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: #007BFF;
-  transition: width 0.3s ease;
-}
-
-.underline-animate:hover:after {
-  width: 100%;
-}
-
-@keyframes pulse {
+@keyframes home2-pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
 
 /* 1. Top Banner */
-.top-banner {
-  background: linear-gradient(135deg, #d8a5e498 0%, #88b5e1 100%);
+.home2-top-banner {
+  /* display: flex; */
+  /* background: linear-gradient(135deg, #d8a5e498 0%, #88b5e1 100%); */
+  background: linear-gradient(135deg, #80c5decb 0%, #6b94a3 100%);
   color: rgb(21, 14, 14);
   text-align: center;
   padding: 80px 20px;
@@ -102,7 +49,7 @@ section {
   overflow: hidden;
 }
 
-.top-banner::before {
+.home2-top-banner::before {
   content: '';
   position: absolute;
   top: 0;
@@ -112,7 +59,7 @@ section {
   background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
 }
 
-.top-banner h1 span {
+.home2-top-banner h1 span {
   font-size: 2.5rem;
   font-weight: 700;
   display: inline-block;
@@ -122,21 +69,23 @@ section {
   color: transparent;
 }
 
-.top-banner p {
+.home2-top-banner p {
   font-size: 1.2rem;
   margin-top: 10px;
   opacity: 0.9;
 }
 
 /* Stats Grid */
-.stats-grid {
+.home2-stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  /* margin: auto; */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-content: space-evenly;
   gap: 20px;
   margin-top: 40px;
 }
 
-.stat-item {
+.home2-stat-item {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 25px;
@@ -146,28 +95,18 @@ section {
   transition: all 0.3s ease;
 }
 
-.stat-item:hover {
+.home2-stat-item:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-5px);
 }
 
-.stat-icon {
+.home2-stat-icon {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-h4 {
-  font-size: 1.5rem;
-  margin: 10px 0;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
 /* 2. Custom Package */
-.custom-package {
+.home2-custom-package {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -178,7 +117,7 @@ p {
   overflow: hidden;
 }
 
-.custom-package::after {
+.home2-custom-package::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -189,7 +128,7 @@ p {
   border-radius: 50%;
 }
 
-.package-left h2 {
+.home2-package-left h2 {
   font-size: 2.2rem;
   margin-bottom: 15px;
   background: linear-gradient(90deg, #003366, #007BFF);
@@ -198,44 +137,37 @@ p {
   color: transparent;
 }
 
-.package-left p {
+.home2-package-left p {
   font-size: 1.1rem;
   margin-bottom: 20px;
   color: #555;
 }
 
-.package-right .emoji-box {
+.home2-package-right .home2-emoji-box {
   font-size: 5rem;
-  /* animation: float 6s ease-in-out infinite; */
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
 }
 
 /* 3. Family Care */
-.family-care {
+.home2-family-care {
   background: linear-gradient(135deg, #80c5decb 0%, #6b94a3 100%);
   padding: 60px 20px;
   border-radius: 16px;
 }
 
-.family-care h2 {
+.home2-family-care h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
   color: #0d0f12;
 }
 
-.family-cards {
+.home2-family-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
-.family-card {
+.home2-family-card {
   background-color: #fff;
   padding: 25px;
   border-radius: 12px;
@@ -245,8 +177,8 @@ p {
   transition: all 0.3s ease;
 }
 
-.tag {
-  background: linear-gradient(90deg, #c5f499cd, #7f9caa);
+.home2-tag {
+  background: linear-gradient(90deg, #c5f499cd, #00a8ff);
   color: white;
   padding: 5px 15px;
   font-size: 0.9rem;
@@ -258,33 +190,15 @@ p {
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
 }
 
-button {
-  background: linear-gradient(90deg, #54708fbe, #00a8ff);
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  margin-top: 15px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
-}
-
-button:hover {
-  background: linear-gradient(90deg, #0066cc, #007BFF);
-  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
-}
-
-.recommend {
+.home2-recommend {
   margin-top: 15px;
   font-size: 0.9rem;
   color: #666;
 }
 
 /* 4. Crore Banner */
-.crore-banner {
-  background: linear-gradient(90deg, #ff9900, #ff6600);
+.home2-crore-banner {
+  background: linear-gradient(90deg, #ff9900, #884518);
   color: white;
   font-size: 1.8rem;
   text-align: center;
@@ -293,18 +207,18 @@ button:hover {
   border-radius: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  animation: gradientShift 5s ease infinite;
+  animation: home2-gradientShift 5s ease infinite;
   background-size: 200% 200%;
 }
 
-@keyframes gradientShift {
+@keyframes home2-gradientShift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
 /* 5. Sample Collection */
-.sample-collection {
+.home2-sample-collection {
   background: linear-gradient(linear-gradient 135deg, #efc2c6 0%, #a3f1f1 100%);
   text-align: center;
   padding: 40px 0;
@@ -312,38 +226,44 @@ button:hover {
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.sample-collection p {
+.home2-sample-collection p {
   font-size: 1.3rem;
   margin: 10px 0;
 }
 
-.sample-collection p:first-child {
+.home2-sample-collection p:first-child {
   color: #007BFF;
   font-weight: 500;
 }
-.dna-insights-slider-section {
+
+/* 6. DNA Slider */
+.home2-dna-slider {
   padding: 50px 20px;
   background: linear-gradient(135deg, #f1f5ff, #fff);
   text-align: center;
 }
-.dna-slider-heading {
+
+.home2-dna-heading {
   font-size: 2rem;
   margin-bottom: 30px;
   color: #2c3e50;
 }
-.dna-slider-container {
+
+.home2-dna-container {
   position: relative;
   display: flex;
   align-items: center;
 }
-.dna-slider-track {
+
+.home2-dna-track {
   display: flex;
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 10px;
 }
-.dna-card {
+
+.home2-dna-card {
   min-width: 220px;
   background: white;
   border-radius: 16px;
@@ -352,20 +272,22 @@ button:hover {
   text-align: center;
   transition: transform 0.3s ease;
 }
-.dna-card img {
+
+.home2-dna-card img {
   width: 100%;
   height: 140px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 10px;
 }
-.dna-card h4 {
+
+.home2-dna-card h4 {
   font-size: 1rem;
   font-weight: 600;
   color: #34495e;
 }
 
-.dna-slider-description {
+.home2-dna-description {
   max-width: 700px;
   margin: 10px auto 20px;
   text-align: center;
@@ -373,36 +295,11 @@ button:hover {
   color: #555;
 }
 
-.dna-card {
-  width: 250px;
-  margin: 0 10px;
-  text-align: center;
-}
-
-.dna-card img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.dna-card h4 {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #333;
-}
-
-.dna-info {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 5px;
-}
-
-
-
-.dna-card:hover {
+.home2-dna-card:hover {
   transform: translateY(-5px);
 }
-.slider-btn {
+
+.home2-slider-btn {
   background: #34495e;
   color: white;
   font-size: 1.5rem;
@@ -412,115 +309,116 @@ button:hover {
   cursor: pointer;
   z-index: 2;
 }
-.slider-btn.left {
+
+.home2-slider-btn.home2-left {
   position: absolute;
   left: -10px;
 }
-.slider-btn.right {
+
+.home2-slider-btn.home2-right {
   position: absolute;
   right: -10px;
 }
 
 /* 7. Routine Checkups */
-.exact-style .checkup-container- {
-  max-width: 1200px;
+.home2-routine-checkups .home2-checkup-container {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px; 
 }
 
-.exact-style .checkup-box {
+.home2-routine-checkups .home2-checkup-box {
   margin-bottom: 40px;
+  /* border-radius: 50px; */
 }
-.exact-style .checkup-header {
+
+.home2-routine-checkups .home2-checkup-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.exact-style .checkup-header h3 {
+.home2-routine-checkups .home2-checkup-header h3 {
   color: #2a2a72;
   font-size: 1.4rem;
+  margin: auto;
 }
 
-.exact-style .checkup-header a {
+.home2-routine-checkups .home2-checkup-header a {
   color: #009ffd;
   text-decoration: none;
   font-weight: 500;
 }
 
-.exact-style .checkup-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+.home2-routine-checkups .home2-checkup-list {
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
+  /* gap: 20px; */
+  justify-content: space-evenly;
 }
 
-.exact-style .checkup-card {
+.home2-routine-checkups .home2-checkup-card {
   border-radius: 10px;
   overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  
+  /* transition: all 0.3s ease;------------------------------------------------------------------------- */
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border: 2px solid #f1f1f1;
 }
 
-.exact-style .checkup-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+/* .home2-checkup-card-image{
+  width: 300px;
+  margin: auto;
+} */
+
+.home2-routine-checkups .home2-checkup-card:hover {
+  transform: scale(1.03);
+  border-color: #009ffd;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.exact-style .card-image-wrapper {
-  position: relative;
-  height: 180px;
-}
-
-.exact-style .card-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.exact-style .doctor-tag {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(42, 42, 114, 0.8);
-  color: white;
-  padding: 8px 12px;
-  font-size: 0.85rem;
+.home2-routine-checkups .home2-card-footer {
+  padding: 12px 10px;
   text-align: center;
-  font-style: italic;
+  background: #f9f9f9;
 }
 
-.exact-style .age-group {
-  padding: 12px;
-  text-align: center;
+.home2-routine-checkups .home2-age-group {
   font-weight: 600;
-  color: #333;
-  background: white;
+  color: #2a2a72;
+  font-size: 1rem;
   margin: 0;
 }
-  
+
+.home2-routine-checkups .home2-doctor-name {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 5px 0 0;
+}
+
+
 /* 8. Testimonials */
-.testimonials {
+.home2-testimonials {
   background: linear-gradient(135deg, #f4f4f4 0%, #e9e9e9 100%);
   padding: 60px 20px;
   border-radius: 16px;
 }
 
-.testimonials h3 {
+.home2-testimonials h3 {
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 40px;
   color: #003366;
 }
 
-.testimonial-cards {
+.home2-testimonial-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.testimonial {
+.home2-testimonial {
   background-color: white;
   padding: 30px;
   border-radius: 16px;
@@ -529,38 +427,38 @@ button:hover {
   transition: all 0.3s ease;
 }
 
-.doc-name {
+.home2-doc-name {
   font-weight: bold;
   margin-top: 15px;
   color: #007BFF;
 }
 
-.doc-title {
+.home2-doc-title {
   font-size: 0.9rem;
   color: #777;
 }
 
 /* 9. Awards */
-.awards {
+.home2-awards {
   padding: 60px 20px;
   background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
   border-radius: 16px;
 }
 
-.awards h3 {
+.home2-awards h3 {
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 40px;
   color: #003366;
 }
 
-.award-cards {
+.home2-award-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
-.award-card {
+.home2-award-card {
   background-color: white;
   padding: 30px;
   border-radius: 16px;
@@ -569,75 +467,41 @@ button:hover {
   transition: all 0.3s ease;
 }
 
-/* 10. Footer */
-.footer {
-  background: linear-gradient(135deg, #2e3439 0%, #000000 100%);
-  color: white;
-  padding: 40px 20px;
-  border-radius: 16px;
-  text-align: center;
-}
-
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.footer-links {
-  font-size: 1rem;
-}
-
-.footer-bottom {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .family-cards, .insight-cards, .testimonial-cards {
+  .home2-family-cards,
+  .home2-testimonial-cards {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .award-cards {
+  .home2-award-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .stats-grid {
+  .home2-stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .custom-package {
+  .home2-custom-package {
     flex-direction: column;
     text-align: center;
   }
   
-  .package-right {
+  .home2-package-right {
     margin-top: 30px;
-  }
-  
-  .routine-checkups {
-    flex-direction: column;
-    gap: 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .family-cards, .insight-cards, .testimonial-cards, .award-cards {
+  .home2-family-cards,
+  .home2-testimonial-cards,
+  .home2-award-cards {
     grid-template-columns: 1fr;
   }
   
-  .top-banner h1 span {
+  .home2-top-banner h1 span {
     font-size: 2rem;
   }
   

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 /* Home.css */
 * {
   margin: 0;
@@ -6,7 +7,6 @@
   font-family: 'Poppins', Arial, sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
   --primary-color: #e63946;
@@ -525,21 +525,32 @@ All clean, all done
 
 /* Small Packages Horizontal Scroller */
 .scroll-packages-section {
-  padding: 20px;
+  padding: 50px 50px;
   background: #f9f9f9;
+  /* text-align: center; */
 }
+
+.scroll-packages-section-heading{
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* .scroll-packages-section .section-title{
+  margin: auto;
+} */
 
 .scroll-packages-wrapper {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 16px;
-  padding: 10px 0;
+  gap: 50px;
+  padding: 50px 50px;
 }
 
 .scroll-package-card {
   min-width: 140px;
-  flex: 0 0 auto;
+  /* flex: 0 0 auto; */
   background: white;
   border-radius: 12px;
   box-shadow: 0 0 10px #ddd;
@@ -773,12 +784,13 @@ All clean, all done
   padding: 15px 25px;
   border-radius: 8px;
   cursor: pointer;
-  width: 100%;
+  /* width: 100%; */
   font-weight: bold;
   font-size: 1rem;
   transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
+  /* position: relative; */
+  /* overflow: hidden; */
+  text-align: center;
 }
 
 .book-btn::before {

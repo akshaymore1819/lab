@@ -1,6 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './Home.css';
 import Home2 from './Home2'
+// import LabLocations from './LobLocations'
+
+
 
 const Home = () => {
   const [currentPackageSlide, setCurrentPackageSlide] = useState(0);
@@ -142,7 +145,9 @@ const Home = () => {
 
       {/* Scrollable Health Packages */}
       <section className="scroll-packages-section">
+        <div className="scroll-packages-section-heading">
         <h2 className="section-title">Explore Health Packages</h2>
+        </div>
         <div className="scroll-packages-wrapper">
           {[
             { name: "Full Body Checkup", icon: "🩺" },
@@ -250,7 +255,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="testimonials scroll-animate">
+      {/* <section className="testimonials scroll-animate">
         <h2 className="fade-in">What Doctors Are Saying</h2>
         <div className="testimonial-cards">
           <div className="testimonial-card slide-in delay-1 hover-grow">
@@ -268,8 +273,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <Home2/>
+      {/* <LabLocations/> */}
     </div>
   );
 };
