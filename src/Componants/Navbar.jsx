@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom'; // ← Add this
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLocationDropdownOpen, setLocationDropdownOpen] = useState(false);
   const [selectedCity, setSelectedCity] = useState('Select Location');
-
-  const navigate = useNavigate(); // ← Add this
+  const navigate = useNavigate();
 
   const cities = ['Delhi', 'Mumbai', 'Bangalore', 'Hyderabad', 'Chennai', 'Kolkata'];
 
@@ -21,7 +19,7 @@ const Navbar = () => {
   };
 
   const handleProfileClick = () => {
-    navigate('/login'); // ← Redirect to login page
+    navigate('/login');
   };
 
   return (
@@ -42,7 +40,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="rl-navbar-main">
+      <div className={`rl-navbar-main ${isMenuOpen ? 'open' : ''}`}>
         <div className="rl-menu-container">
           <div className="rl-menu" onClick={toggleMenu}>☰ Menu</div>
           {isMenuOpen && (
@@ -70,7 +68,9 @@ const Navbar = () => {
         </div>
 
         <div className="rl-nav-icons">
-        <Link to='/login'>  <span className="rl-user-icon rl-hover-grow" onClick={handleProfileClick}>👤</span></Link> {/* ← updated */}
+          <Link to='/login'>
+            <span className="rl-user-icon rl-hover-grow" onClick={handleProfileClick}>👤</span>
+          </Link>
           <span className="rl-cart-icon rl-hover-grow">🛒</span>
         </div>
       </div>

@@ -1,238 +1,145 @@
-/* Base Styles */
-.health-content {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    padding: 30px 5%;
-    background: #fefefe;
-    color: #222;
-    line-height: 1.6;
-  }
-  
-  /* Headings */
-  h2 {
-    font-size: 28px;
-    color: #0db5ab;
-    margin-bottom: 16px;
-  }
-  
-  h3 {
-    font-size: 22px;
-    color: #333;
-    margin-bottom: 12px;
-  }
-  
-  /* Language Buttons */
-  .language-buttons {
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .language-buttons button {
-    background: #fff;
-    border: 1px solid #0db5ab;
-    color: #0db5ab;
-    padding: 6px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-  
-  .language-buttons button:hover {
-    background: #0db5ab;
-    color: white;
-  }
-  
-  /* Card Containers */
-  .featured-cards,
-  .story-cards,
-  .category-cards,
-  .video-cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  /* Generic Card Styles */
-  .featured-card,
-  .story-card,
-  .category-card,
-  .video-card {
-    width: 180px;
-    height: 220px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-  }
-  
-  .featured-card:hover,
-  .story-card:hover,
-  .category-card:hover,
-  .video-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  }
-  
-  /* Category Section */
-  .category-block {
-    margin: 40px 0;
-  }
-  
-  .category-icon {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    background: #0db5ab;
-    border-radius: 50%;
-    margin-right: 8px;
-  }
-  
-  .explore-btn {
-    margin-top: 14px;
-    padding: 8px 20px;
-    background: #0db5ab;
-    color: #fff;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .explore-btn:hover {
-    background: #0a9086;
-  }
-  
-  /* Callback Section */
-  .callback-section {
-    background: linear-gradient(135deg, #e6f8f7, #f3fcff);
-    padding: 40px;
-    text-align: center;
-    border-radius: 12px;
-    margin-top: 50px;
-  }
-  
-  .callback-benefits {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin: 20px 0;
-    font-weight: 500;
-    color: #444;
-  }
-  
-  .callback-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 10px;
-  }
-  
-  .callback-form input {
-    padding: 12px 14px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 200px;
-    font-size: 14px;
-  }
-  
-  .callback-form button {
-    padding: 12px 24px;
-    background: #0db5ab;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .callback-form button:hover {
-    background: #0a9086;
-  }
-  
-  /* Knowledge Hub */
-  .knowledge-hub {
-    margin-top: 60px;
-  }
-  
-  .knowledge-rows {
-    display: flex;
+.help-wrapper {
+  background: linear-gradient(120deg, #e0f7fa, #ffffff);
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.help-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.help-title {
+  text-align: center;
+  font-size: 36px;
+  color: #0db5ab;
+  margin-bottom: 30px;
+}
+
+.help-banner {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.help-banner h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.help-banner p {
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+}
+
+.help-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.help-card {
+  flex: 1 1 300px;
+  background: #f0fdfa;
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  background: #e0f7f6;
+}
+
+.icon {
+  font-size: 28px;
+  padding: 12px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.icon.phone { background: #0db5ab; }
+.icon.whatsapp { background: #25D366; }
+.icon.email { background: #ff5722; }
+
+.label {
+  font-weight: 600;
+  color: #333;
+}
+
+.value {
+  color: #555;
+  font-size: 14px;
+}
+
+.help-extra {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.help-extra h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.help-extra h4 {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.help-extra button {
+  padding: 10px 22px;
+  background: #0db5ab;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.help-extra button:hover {
+  background: #098f86;
+}
+
+.help-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .help-cards {
     flex-direction: column;
-    gap: 16px;
   }
-  
-  .knowledge-row {
-    display: flex;
-    gap: 16px;
+
+  .help-card {
+    width: 100%;
   }
-  
-  .knowledge-card {
-    flex: 1;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    transition: all 0.3s ease;
+
+  .help-title {
+    font-size: 28px;
   }
-  
-  .knowledge-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+
+  .help-banner h2 {
+    font-size: 20px;
   }
-  
-  /* App Download Section */
-  .app-download {
-    margin-top: 60px;
-    background: linear-gradient(135deg, #f0fbff, #e6fdf9);
-    text-align: center;
-    padding: 40px;
-    border-radius: 12px;
-  }
-  
-  .app-download h3 {
-    font-size: 24px;
-    margin-bottom: 12px;
-    color: #0db5ab;
-  }
-  
-  .app-download p {
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .app-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .app-buttons button {
-    background: #0db5ab;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .app-buttons button:hover {
-    background: #0a9086;
-  }
-  
+}

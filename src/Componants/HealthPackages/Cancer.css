@@ -1,0 +1,119 @@
+/* CancerTestsPage.css */
+.cancer-tests {
+    font-family: Arial, sans-serif;
+    padding: 100px 20px 20px 20px; 
+    background-color: #f8f8f8;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .cancer-tests h1 {
+    margin-top: 80px; /* or 100px depending */
+}
+  section {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .test-cards-container,
+  .package-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .test-card,
+  .package-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .test-card:hover,
+  .package-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .test-price,
+  .package-price {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .test-price .price,
+  .package-price .price {
+    font-weight: bold;
+    color: #e60000;
+  }
+  
+  .test-price .original-price,
+  .package-price .original-price {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .test-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .test-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .report-time {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .action-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .action-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .show-more-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .show-more-btn:hover {
+    background-color: #218838;
+  }
+  

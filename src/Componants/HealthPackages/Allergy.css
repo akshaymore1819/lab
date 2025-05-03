@@ -1,0 +1,526 @@
+.mainallergy h1 {
+    font-size: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.card-containermainallergy {
+    display: flex;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.card-containerallergy {
+    max-width: 600px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 16px auto;
+    height: 40vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-containerallergy:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.title-rowallergy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card-titleallergy {
+    color: #d6336c;
+    font-size: 1.5rem;
+}
+
+.dropdown-iconallergy {
+    color: #555;
+}
+
+.priceallergy {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.original-priceallergy {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #aaa;
+    margin-left: 6px;
+}
+
+.tag-containerallergy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+.tagallergy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 8px 12px;
+    height: 36px;
+    font-size: 15px;
+    color: #333;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.tag-iconallergy {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.tag-nameallergy {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-footerallergy {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #555;
+    padding-top: 0.5rem;
+}
+
+.reports-labelallergy {
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+.terms-tooltipallergy {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #555;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: underline dotted;
+}
+
+.tooltip-textallergy {
+    visibility: hidden;
+    width: 240px;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.4;
+    transition: opacity 0.2s ease;
+}
+
+.terms-tooltipallergy:hover .tooltip-textallergy {
+    visibility: visible;
+    opacity: 1;
+}
+
+.timing-infoallergy {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    font-size: 15px;
+}
+
+.timing-badgeallergy {
+    background-color: #e0f0ff;
+    color: #0077cc;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.vertical-lineallergy {
+    width: 2px;
+    height: 17px;
+    background-color: #ccc;
+    margin: 0 12px;
+}
+
+.test-countallergy {
+    color: #444;
+}
+
+.add-btnallergy {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 8rem;
+}
+
+.view-cart-btnallergy {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #007bff;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.card-containerallergy1 {
+    max-width: 600px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 16px auto;
+    height: 40vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-containerallergy1:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.title-rowallergy1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card-titleallergy1 {
+    color: #d6336c;
+    font-size: 1.5rem;
+}
+
+.dropdown-iconallergy1 {
+    color: #555;
+}
+
+.priceallergy1 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.original-priceallergy1 {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #aaa;
+    margin-left: 6px;
+}
+
+.tag-containerallergy1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+.tagallergy1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 8px 12px;
+    height: 36px;
+    font-size: 15px;
+    color: #333;
+    box-sizing: border-box;
+    flex: 1 0 calc(25% - 8px);
+    min-width: 0;
+}
+
+.tagallergy1.second-row {
+    flex: 1 0 calc(33.33% - 8px);
+    font-size: 15px;
+    padding: 5px 8px;
+    height: 28px;
+}
+
+.tag-iconallergy1 {
+    font-size: 14px;
+    opacity: 0.8;
+    flex-shrink: 0;
+}
+
+.tag-nameallergy1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-footerallergy1 {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #555;
+    padding-top: 0.5rem;
+}
+
+.reports-labelallergy1 {
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+.terms-tooltipallergy1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #555;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: underline dotted;
+}
+
+.tooltip-textallergy1 {
+    visibility: hidden;
+    width: 240px;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.4;
+    transition: opacity 0.2s ease;
+}
+
+.terms-tooltipallergy1:hover .tooltip-textallergy1 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.timing-infoallergy1 {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    font-size: 15px;
+}
+
+.timing-badgeallergy1 {
+    background-color: #e0f0ff;
+    color: #0077cc;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.vertical-lineallergy1 {
+    width: 2px;
+    height: 17px;
+    background-color: #ccc;
+    margin: 0 12px;
+}
+
+.test-countallergy1 {
+    color: #444;
+}
+
+.add-btnallergy1 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 8rem;
+}
+
+.view-cart-btnallergy1 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #007bff;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.test-list-cardallergy1 {
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.test-namesallergy1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.more-linkallergy1 {
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.show-more-containerallergy {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.show-more-btnallergy {
+    background-color: #fff;
+    color: #2d7ff9;
+    border: 1px solid #2d7ff9;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.show-more-btnallergy:hover {
+    background-color: #2d7ff9;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .card-containermainallergy {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .card-containerallergy,
+    .card-containerallergy1 {
+      width: 100%;
+      max-width: 90%;
+      margin: 1rem auto;
+      height: auto;
+    }
+  
+    .card-containerallergy:hover,
+    .card-containerallergy1:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+  
+    .tag-containerallergy,
+    .tag-containerallergy1 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .add-btnallergy,
+    .add-btnallergy1 {
+      margin-left: 0;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .view-cart-btnallergy,
+    .view-cart-btnallergy1 {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mainallergy h1 {
+      font-size: 1.5rem;
+      padding-top: 2rem;
+      text-align: center;
+    }
+  
+    .card-containermainallergy {
+      flex-direction: column;
+    }
+  
+    .card-containerallergy,
+    .card-containerallergy1 {
+      width: 100%;
+      max-width: 100%;
+      margin: 1rem auto;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .card-titleallergy,
+    .card-titleallergy1 {
+      color: #d6336c;
+      font-size: 1rem;
+    }
+  
+    .priceallergy,
+    .priceallergy1 {
+      font-size: 1.2rem;
+    }
+  
+    .original-priceallergy,
+    .original-priceallergy1 {
+      font-size: 1rem;
+    }
+  
+    .tag-containerallergy,
+    .tag-containerallergy1 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .card-footerallergy,
+    .card-footerallergy1 {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+    }
+  
+    .timing-infoallergy {
+      display: flex;
+      align-items: center;
+      margin-left: 16px;
+      font-size: 15px;
+    }
+  
+    .timing-infoallergy1 {
+      margin-left: 0;
+    }
+  }
+  

@@ -1,0 +1,297 @@
+/* GENERAL CONTAINER */
+.aboutus-container {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #333;
+    padding: 30px;
+    background-color: #fefefe;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* HERO SECTION */
+  .aboutus-hero-section {
+    background: linear-gradient(135deg, #7c7578, #f8bbd0);
+    padding: 60px 30px;
+    text-align: center;
+    color: #fff;
+    /* height: 10%; */
+
+    border-radius: 15px;
+    margin-bottom: 50px;
+  }
+  
+  .aboutus-hero-title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .aboutus-hero-subtitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+
+  .aboutus-hero-section {
+    background: url('../../assets/d2.jpg') center center/cover no-repeat;
+    height: 500px; /* Increased height */
+    width: 100%; /* Full width */
+    text-align: center;
+    color: #fff;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+  }
+  
+  .aboutus-hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsla(330, 40%, 4%, 0.132); /* Overlay for better contrast */
+    border-radius: 15px;
+    z-index: 1;
+  }
+  
+  .aboutus-hero-title,
+  .aboutus-hero-subtitle {
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  /* REVOLUTION SECTION */
+  .aboutus-revolution-section,
+  .aboutus-journey-section {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+  }
+  
+  .aboutus-revolution-section h2,
+  .aboutus-journey-section h2 {
+    color: #d81b60;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .aboutus-revolution-section p,
+  .aboutus-journey-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  
+  .aboutus-revolution-section strong,
+  .aboutus-journey-section strong {
+    color: #c2185b;
+  }
+  
+  .aboutus-revolution-section em,
+  .aboutus-journey-section em {
+    font-style: italic;
+    color: #ad1457;
+  }
+  
+  /* JOURNEY SPECIFIC STYLES */
+  /* (Same styling as revolution, already defined above) */
+  
+  /* GLUCOSE TO GENETICS SECTION */
+  .aboutus-glucose-section {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .aboutus-glucose-section h2 {
+    color: #d81b60;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .aboutus-glucose-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .aboutus-glucose-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .aboutus-feature-box {
+    background: #fce4ec;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 280px;
+    transition: transform 0.3s ease;
+  }
+  
+  .aboutus-feature-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .aboutus-feature-box h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #d81b60;
+  }
+  
+  /* PILLARS SECTION */
+  .aboutus-pillars-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    background: #f8bbd0;
+    padding: 40px;
+    border-radius: 15px;
+  }
+  
+  .pillar-box {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pillar-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pillar-box h3 {
+    margin: 10px 0;
+    font-size: 1.25rem;
+    color: #d81b60;
+  }
+  
+  .pillar-box p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  /* IMPACT DIFFERENTIATORS SECTION */
+  .aboutus-differentiators-section {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+  }
+  
+  .aboutus-differentiators-section h2 {
+    color: #d81b60;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .aboutus-differentiators-section ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .aboutus-differentiators-section li {
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    color: #333;
+  }
+  
+  .aboutus-differentiators-section .aboutus-icon {
+    margin-right: 10px;
+  }
+  
+  /* CORE VALUES SECTION */
+  .aboutus-values-section {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .aboutus-values-section h2 {
+    color: #d81b60;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .aboutus-values-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .values-column {
+    background: #fce4ec;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 280px;
+    transition: transform 0.3s ease;
+  }
+  
+  .values-column:hover {
+    transform: translateY(-5px);
+  }
+  
+  .values-column h3 {
+    margin-bottom: 15px;
+    color: #ad1457;
+    font-size: 1.25rem;
+  }
+  
+  .values-column ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  .values-column li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  /* RESPONSIVE MEDIA QUERIES */
+  @media (max-width: 768px) {
+    .aboutus-container {
+      padding: 20px;
+    }
+    .aboutus-hero-title {
+      font-size: 2.2rem;
+    }
+    .aboutus-hero-subtitle {
+      font-size: 1.4rem;
+    }
+    .aboutus-revolution-section,
+    .aboutus-journey-section,
+    .aboutus-glucose-section,
+    .aboutus-differentiators-section,
+    .aboutus-values-section {
+      padding: 30px;
+    }
+  }
+  

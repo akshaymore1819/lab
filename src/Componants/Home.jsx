@@ -1,9 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
-import './Home.css';
-import Home2 from './Home2'
-// import LabLocations from './LobLocations'
-
-
+import React, { useEffect, useState, useRef } from "react";
+import "./Home.css";
+import Home2 from "./Home2";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [currentPackageSlide, setCurrentPackageSlide] = useState(0);
@@ -12,71 +10,135 @@ const Home = () => {
   const carouselRef = useRef(null);
 
   const cities = [
-    'Delhi', 'Mumbai', 'Bangalore', 'Hyderabad', 'Chennai',
-    'Kolkata', 'Pune', 'Ahmedabad', 'Jaipur', 'Chandigarh',
-    'Lucknow', 'Indore', 'Bhopal', 'Patna', 'Nagpur'
+    "Delhi",
+    "Mumbai",
+    "Bangalore",
+    "Hyderabad",
+    "Chennai",
+    "Kolkata",
+    "Pune",
+    "Ahmedabad",
+    "Jaipur",
+    "Chandigarh",
+    "Lucknow",
+    "Indore",
+    "Bhopal",
+    "Patna",
+    "Nagpur",
   ];
 
   // Toggle menu and location dropdown
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleLocationDropdown = () => setIsLocationDropdownOpen(!isLocationDropdownOpen);
+  const toggleLocationDropdown = () =>
+    setIsLocationDropdownOpen(!isLocationDropdownOpen);
 
   // Close dropdowns on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        !event.target.closest('.menu-container') &&
-        !event.target.closest('.location-container')
+        !event.target.closest(".menu-container") &&
+        !event.target.closest(".location-container")
       ) {
         setIsMenuOpen(false);
         setIsLocationDropdownOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const healthPackages = [
     {
       id: 1,
-      title: "Fit India Full Body Checkup With Vitamin Screening with Free HsCRP",
+      title:
+        "Fit India Full Body Checkup With Vitamin Screening with Free HsCRP",
       time: "Reports in 15 hours | Parameters 92",
-      tests: ["Heart", "Diabetes (HbAlc)", "Lipid", "Liver", "Kidney", "Infection", "Thyroid"],
+      tests: [
+        <Link to="/Package1">Heart</Link>,
+        <Link to="/Package1">Diabetes (HbA1c)</Link>,
+        <Link to="/Package1">Lipid</Link>,
+        <Link to="/Package1">Liver</Link>,
+        <Link to="/Package1">Kidney</Link>,
+        <Link to="/Package1">Infection</Link>,
+        <Link to="/Package1">Thyroid</Link>
+      ],
       price: "₹1599",
       discount: "78% off",
       originalPrice: "₹7644",
-      limitedPeriod: "for a limited period"
+      limitedPeriod: "for a limited period",
     },
     {
       id: 2,
       title: "Fit India Full Body Checkup with Free HbA1c",
       time: "Reports in 15 hours | Parameters 89",
-      tests: ["Diabetes (HbAlc)", "Lipid", "Liver", "Kidney", "Infection", "Thyroid"],
+      tests: [
+       <Link to="/Package1">Diabetes (HbAlc)</Link> ,
+       <Link to="/Package1">Lipid</Link> ,
+       <Link to="/Package1">Liver</Link> ,
+       <Link to="/Package1"> Kidney</Link> ,
+       <Link to="/Package1"> Infection</Link> ,
+       <Link to="/Package1"> Thyroid</Link> ,
+      
+      ],
       price: "₹1099",
       discount: "78% off",
       originalPrice: "₹5099",
-      limitedPeriod: "for a limited period"
+      limitedPeriod: "for a limited period",
     },
     {
       id: 3,
       title: "Senior Citizen Full Body Checkup - Female (Advance)",
       time: "Reports in 15 hours | Parameters 99",
-      tests: ["CBC", "Blood Sugar", "Lipid Profile", "Liver Function", "Kidney Function"],
+      tests: [
+        <Link to="/Package2"> CBC</Link> ,
+        <Link to="/AddMemberForm">  Blood Sugar</Link> ,
+        <Link to="/Package1">  Lipid Profile</Link> ,
+        <Link to="/Package1"> Liver Function</Link> ,
+        <Link to="/Package1"> Kidney Function</Link> ,
+      
+      ],
       price: "₹9970",
       discount: "78% off",
       originalPrice: "₹31200",
-      limitedPeriod: "for a limited period"
-    }
+      limitedPeriod: "for a limited period",
+    },
   ];
-
+  const packages = [
+    { name: "Full Body Checkup", icon: "🩺" },
+    { name: "Diabetes Profile", icon: "🩸", route: "/daibetes"},
+    { name: "Heart Health", icon: "❤️"},
+    { name: "Fever", icon: "🤒" },
+    { name: "Kidney Health", icon: "🧫" },
+    { name: "Thyroid Panel", icon: "🦋" ,route:"/Thyroide" },
+    { name: "Immunity Test", icon: "🛡️" },
+    { name: "COVID-19 RTPCR", icon: "🦠" },
+    { name: "Vitamin D & B12", icon: "💊" },
+    { name: "Pregnancy Profile", icon: "🤰" },
+    { name: "Hormone Panel", icon: "🧬",route:"/Hormone" },
+    { name: "Allergy Screening", icon: "🌼",route:"/Allergy" },
+    { name: "Arthritis Panel", icon: "🦴" },
+    { name: "Cancer Screening", icon: "🎗️",route:"/Cancer" },
+    { name: "Lipid Profile", icon: "🥑" },
+    { name: "Senior Citizen Care", icon: "👴" },
+    { name: "Women’s Wellness", icon: "💃" },
+    { name: "Men’s Health", icon: "🕺" },
+  ];
   const womensPackages = [
     {
       id: 1,
       title: "Stay Fit Plus Full Body Checkup With Free RA Factor - Female",
       time: "Reports in 15 hours | Parameters 100",
-      tests: ["Heart", "Diabetes (HbAlc)", "Liver", "Kidney", "Infection", "Thyroid", "Iron"],
+      tests: [
+        "Heart",
+        "Diabetes (HbAlc)",
+        "Liver",
+        "Kidney",
+        "Infection",
+        "Thyroid",
+        "Iron",
+      ],
       price: "₹8768",
-      originalPrice: "₹31200"
+      originalPrice: "₹31200",
     },
     {
       id: 2,
@@ -84,30 +146,35 @@ const Home = () => {
       time: "Reports in 15 hours | Parameters 85",
       tests: ["Hormones", "Thyroid", "Vitamin D", "Iron Studies", "CBC"],
       price: "₹5999",
-      originalPrice: "₹12500"
-    }
+      originalPrice: "₹12500",
+    },
   ];
 
   // Auto slider
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentPackageSlide(prev => (prev + 1) % 3);
+      setCurrentPackageSlide((prev) => (prev + 1) % 3);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     const animateElements = () => {
-      const elements = document.querySelectorAll('.fade-in, .slide-in, .pop-in');
-      elements.forEach(el => {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1 });
+      const elements = document.querySelectorAll(
+        ".fade-in, .slide-in, .pop-in"
+      );
+      elements.forEach((el) => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
         observer.observe(el);
       });
     };
@@ -115,29 +182,31 @@ const Home = () => {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
-      const animatedElements = document.querySelectorAll('.scroll-animate');
-      animatedElements.forEach(element => {
+      const animatedElements = document.querySelectorAll(".scroll-animate");
+      animatedElements.forEach((element) => {
         if (scrollPosition > element.offsetTop + 100) {
-          element.classList.add('animated');
+          element.classList.add("animated");
         }
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="redcliffe-app">
-     
-
       {/* Hero Section */}
       <section className="hero slide-in">
         <div className="hero-content scroll-animate">
           <h1>Looking for a test?</h1>
           <div className="hero-actions">
-            <button className="search-btn pulse"><span className="search-icon">🔍</span> Search Tests</button>
-            <button className="upload-btn hover-grow">Upload Prescription</button>
+            <button className="search-btn pulse">
+              <span className="search-icon">🔍</span> Search Tests
+            </button>
+            <button className="upload-btn hover-grow">
+              Upload Prescription
+            </button>
             <button className="book-btn pulse hover-grow">Book a Test</button>
           </div>
         </div>
@@ -146,66 +215,67 @@ const Home = () => {
       {/* Scrollable Health Packages */}
       <section className="scroll-packages-section">
         <div className="scroll-packages-section-heading">
-        <h2 className="section-title">Explore Health Packages</h2>
+          <h2 className="section-title">Explore Health Packages</h2>
         </div>
         <div className="scroll-packages-wrapper">
-          {[
-            { name: "Full Body Checkup", icon: "🩺" },
-            { name: "Diabetes Profile", icon: "🩸" },
-            { name: "Heart Health", icon: "❤️" },
-            { name: "Liver Function", icon: "🍺" },
-            { name: "Kidney Health", icon: "🧫" },
-            { name: "Thyroid Panel", icon: "🦋" },
-            { name: "Immunity Test", icon: "🛡️" },
-            { name: "COVID-19 RTPCR", icon: "🦠" },
-            { name: "Vitamin D & B12", icon: "💊" },
-            { name: "Pregnancy Profile", icon: "🤰" },
-            { name: "Hormone Panel", icon: "🧬" },
-            { name: "Allergy Screening", icon: "🌼" },
-            { name: "Arthritis Panel", icon: "🦴" },
-            { name: "Cancer Screening", icon: "🎗️" },
-            { name: "Lipid Profile", icon: "🥑" },
-            { name: "Senior Citizen Care", icon: "👴" },
-            { name: "Women’s Wellness", icon: "💃" },
-            { name: "Men’s Health", icon: "🕺" },
-          ].map((pkg, index) => (
-            <div key={index} className="scroll-package-card">
-              <div className="icon">{pkg.icon}</div>
-              <div className="name">{pkg.name}</div>
-            </div>
-          ))}
+          {packages.map((pkg, index) =>
+            pkg.route ? (
+              <Link
+                to={pkg.route}
+                key={index}
+                className="scroll-package-card-link"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <div className="scroll-package-card">
+                  <div className="icon">{pkg.icon}</div>
+                  <div className="name">{pkg.name}</div>
+                </div>
+              </Link>
+            ) : (
+              <div className="scroll-package-card" key={index}>
+                <div className="icon">{pkg.icon}</div>
+                <div className="name">{pkg.name}</div>
+              </div>
+            )
+          )}
         </div>
       </section>
 
       {/* Popular Health Packages */}
       <section className="health-packages">
-        <div className="section-header fade-in">
-          <h2>Popular Health Checkup Packages</h2>
-          <h3>Top Health Packages</h3>
-        </div>
-        <div className="packages-grid">
-          {healthPackages.map((pkg, index) => (
-            <div key={pkg.id} className={`package-card pop-in delay-${index} hover-grow`}>
-              <h4>{pkg.title}</h4>
-              <p className="time">{pkg.time}</p>
-              <div className="tests">
-                {pkg.tests.map((test, i) => <span key={i}>{test}</span>)}
-              </div>
-              <div className="price-section">
-                <span className="price">{pkg.price}</span>
-                <span className="discount">{pkg.discount}</span>
-                <span className="original-price">{pkg.originalPrice}</span>
-              </div>
-              <p className="limited-period">{pkg.limitedPeriod}</p>
-              <button className="book-btn hover-grow">Book</button>
+      <div className="section-header fade-in">
+        <h2>Popular Health Checkup Packages</h2>
+        <h3>Top Health Packages</h3>
+      </div>
+      <div className="packages-grid">
+        {healthPackages.map((pkg, index) => (
+          <div
+            key={pkg.id}
+            className={`package-card pop-in delay-${index} hover-grow`}
+          >
+            <h4>{pkg.title}</h4>
+            <p className="time">{pkg.time}</p>
+            <div className="tests">
+              {pkg.tests.map((test, i) => (
+                <span key={i}>{test}</span>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+            <div className="price-section">
+              <span className="price">{pkg.price}</span>
+              <span className="discount">{pkg.discount}</span>
+              <span className="original-price">{pkg.originalPrice}</span>
+            </div>
+            <p className="limited-period">{pkg.limitedPeriod}</p>
+            <Link to="/package2" className="book-btn hover-grow">Book</Link>
+          </div>
+        ))}
+      </div>
+    </section>
 
       {/* Why Choose Us */}
-      <section className="why-choose-us scroll-animate">
-        <h2 className="fade-in">Why Book Tests With Us?</h2>
+       {/* Why Choose Us */}
+       <section className="why-choose-us scroll-animate">
+        <h2 className="fade-in">Why Book Tests With us?</h2>
         <div className="features">
           <div className="feature slide-in delay-1 hover-grow">
             <div className="icon">✓</div>
@@ -225,24 +295,47 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* Women's Health */}
       <section className="womens-health scroll-animate">
         <div className="section-header fade-in">
           <h2>Women's Health & Wellness Health Packages</h2>
-          <p>Take control of your health with our comprehensive women's health packages</p>
+          <p>
+            Take control of your health with our comprehensive women's health
+            packages
+          </p>
         </div>
         <div className="categories fade-in">
-          {['All', 'Wellness', 'Pcos/PCOD', 'Sexual Health', 'Menstrual Health', 'Pregnancy', 'Cancer', 'Infertility'].map((cat, index) => (
-            <button key={index} className={`hover-grow ${index === 0 ? 'active' : ''}`}>{cat}</button>
+          {[
+            "All",
+            "Wellness",
+            "Pcos/PCOD",
+            "Sexual Health",
+            "Menstrual Health",
+            "Pregnancy",
+            "Cancer",
+            "Infertility",
+          ].map((cat, index) => (
+            <button
+              key={index}
+              className={`hover-grow ${index === 0 ? "active" : ""}`}
+            >
+              {cat}
+            </button>
           ))}
         </div>
         <div className="packages-grid">
           {womensPackages.map((pkg, index) => (
-            <div key={pkg.id} className={`package-card pop-in delay-${index + 3} hover-grow`}>
+            <div
+              key={pkg.id}
+              className={`package-card pop-in delay-${index + 3} hover-grow`}
+            >
               <h4>{pkg.title}</h4>
               <p className="time">{pkg.time}</p>
               <div className="tests">
-                {pkg.tests.map((test, i) => <span key={i}>{test}</span>)}
+                {pkg.tests.map((test, i) => (
+                  <span key={i}>{test}</span>
+                ))}
               </div>
               <div className="price-section">
                 <span className="price">{pkg.price}</span>
@@ -274,7 +367,7 @@ const Home = () => {
           </div>
         </div>
       </section> */}
-      <Home2/>
+      <Home2 />
       {/* <LabLocations/> */}
     </div>
   );

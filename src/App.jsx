@@ -11,7 +11,17 @@ import GeneCliffe from './Componants/NavComponents/GeneCliffe';
 import HealthBlog from './Componants/NavComponents/HealthBlog';
 import HelpSupport from './Componants/NavComponents/HelpSupport';
 import Partnership from './Componants/NavComponents/Partnership';
+import Daibetes from './Componants/HealthPackages/Daibetes';
+import Allergy from './Componants/HealthPackages/Allergy';
 import Quality from './Componants/NavComponents/Quality';
+import ThyroidTests from './Componants/HealthPackages/ThyroidTests';
+import HormoneTests from './Componants/HealthPackages/HormoneTests';
+import Cancer from './Componants/HealthPackages/Cancer';
+import Package1 from './Componants/TopPackages/Package1';
+import Package2 from './Componants/TopPackages/Package2';
+import AddMemberForm from './Componants/TopPackages/AddMemberForm';
+
+
 
 function App() {
   return (
@@ -31,6 +41,17 @@ function App() {
           <Route path="/helpsupport" element={<HelpSupport />} />
           <Route path="/partnership" element={<Partnership />} />
           <Route path="/quality" element={<Quality />} />  
+          <Route path="/daibetes" element={<Daibetes/>}/>
+          <Route path="/Thyroide" element={<ThyroidTests/>}/>
+          <Route path="/Allergy" element={<Allergy/>}/>
+          <Route path="/Hormone" element={<HormoneTests/>}/>
+          <Route path="/Cancer" element={<Cancer/>}/>
+          <Route path="/Package1" element={<Package1/>}/>
+          <Route path="/Package2" element={<Package2/>}/>
+          <Route path="/AddMemberForm" element={<AddMemberForm/>}/>
+
+
+
 
         </Routes>
 

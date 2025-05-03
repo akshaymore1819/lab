@@ -1,0 +1,364 @@
+/* Base Styles */
+.health-container {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #f8fafc;
+    min-height: 100vh;
+  }
+  
+  .health-main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 10rem;
+  }
+  
+  /* Animated Header */
+  .health-header {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    animation: slideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .header-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .progress-container {
+    position: relative;
+  }
+  
+  .progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .progress-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+  
+  .step-indicator {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    margin: 0 auto 0.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .progress-step.active .step-indicator {
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.2);
+  }
+  
+  .progress-step.active .step-indicator::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #3b82f6;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .step-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  .progress-bar {
+    height: 3px;
+    background: rgba(255,255,255,0.2);
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    right: 10%;
+    z-index: 0;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: #fff;
+    transition: width 0.5s ease;
+  }
+  
+  /* Content Grid */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    animation: fadeInUp 0.8s ease;
+  }
+  
+  /* Selected Packages */
+  .selected-packages {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  
+  .package-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .package-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .price-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .current-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #10b981;
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: #94a3b8;
+  }
+  
+  .discount-badge {
+    background: #fef3c7;
+    color: #d97706;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+  }
+  
+  .remove-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .remove-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  .add-more-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    color: #64748b;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .add-more-btn:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+    background: #e0e7ff;
+  }
+  
+  /* Order Summary */
+  .order-summary {
+    position: sticky;
+    top: 2rem;
+  }
+  
+  .summary-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  
+  .benefits-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .benefit-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    gap: 1rem;
+  }
+  
+  .member-icon {
+    font-size: 1.5rem;
+  }
+  
+  .benefit-info {
+    flex: 1;
+  }
+  
+  .member-count {
+    font-weight: 600;
+  }
+  
+  .discount-percent {
+    color: #10b981;
+    font-weight: 600;
+  }
+  
+  .address-card {
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .address-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  
+  .select-address-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .select-address-btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+  }
+  
+  .add-address-btn {
+    background: none;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .add-address-btn:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+  }
+  
+  /* Sticky Footer */
+  .action-footer {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.05);
+    animation: slideUp 0.6s ease;
+  }
+  
+  .next-action-btn {
+    width: 100%;
+    padding: 1.25rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .next-action-btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(59,130,246,0.2);
+  }
+  
+  /* Animations */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .health-header {
+      padding: 1.5rem;
+      border-radius: 0;
+      margin: -2rem -2rem 2rem;
+    }
+    
+    .progress-steps {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .progress-bar {
+      display: none;
+    }
+  }

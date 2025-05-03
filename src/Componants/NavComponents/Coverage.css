@@ -1,0 +1,200 @@
+.media-page {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    padding: 2rem;
+    background: #f9f9f9;
+  }
+  
+  .headline-section {
+    background: linear-gradient(135deg, #f34b7d, #ff6a00);
+    padding: 2rem;
+    border-radius: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+  
+  .headline-section h2 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+  
+  .read-article-btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.4rem;
+    background: #fff;
+    color: #f34b7d;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .read-article-btn:hover {
+    background: #ffe0e7;
+  }
+  
+  .media-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .media-header h3 {
+    font-size: 1.5rem;
+  }
+  
+  .view-all-link {
+    color: #f34b7d;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .media-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .media-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 300px;
+    flex: 1 1 280px;
+    transition: all 0.3s;
+  }
+  
+  .media-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .media-content h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .media-content p {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    color: #555;
+  }
+  
+  .media-content span {
+    font-size: 0.85rem;
+    color: #999;
+  }
+  
+  .insights-section {
+    background: #f9f9ff;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 2rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.03);
+  }
+  
+  .insights-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .insights-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .insight-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+  
+  .insight-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .media-contact-full-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffe0e0, #fff4f4);
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  }
+  
+  .media-contact-full-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .media-contact-full-email a {
+    color: #d92f5b;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .awards-section-container {
+    margin-top: 3rem;
+  }
+  
+  .awards-section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .awards-section-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .awards-section-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+  
+  .awards-section-card h4 {
+    color: #f34b7d;
+    margin-bottom: 0.5rem;
+  }
+  
+  .awards-section-card-org {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .awards-section-card-org img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  

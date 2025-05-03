@@ -1,221 +1,203 @@
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
- 
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Navbar Styling */
+/* Fixed Navbar */
 .rl-navbar {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: white;
-  border-bottom: 1px solid #eee;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  font-family: sans-serif;
 }
 
-/* Navbar Top Section (Brand & Location) */
+/* Top row */
 .rl-navbar-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 30px;
-  background: #fff;
-  position: relative;
 }
 
-/* Brand Styling */
 .rl-brand {
+  font-size: 22px;
+  color: #d1006b;
   font-weight: bold;
-  font-size: 24px;
-  color: #e60073;
-  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
-.rl-brand:hover {
-  color: #d0005f;
-}
-
-/* Location Section */
 .rl-location-container {
+  position: relative;
   cursor: pointer;
-  padding: 6px 14px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  gap: 5px;
-  position: absolute;
-  left: 300px;
 }
 
 .rl-location-label {
-  font-size: 14px;
-  color: #333;
   font-weight: 500;
 }
 
 .rl-location-dropdown {
   position: absolute;
-  top: 40px;
-  background: white;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  z-index: 10;
-  padding: 10px;
-  min-width: 150px;
+  top: 100%;
+  right: 0;
+  background-color: rgb(158, 148, 148);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  width: 160px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .rl-city-item {
-  padding: 6px 10px;
+  padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.2s ease;
 }
-
 .rl-city-item:hover {
-  background: #f0f0f0;
-  border-radius: 6px;
+  background-color: #f9f9f9;
 }
 
-/* Navbar Main Section (Menu & Actions) */
-.rl-navbar-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 30px;
-  background: #f9f9f9;
-  border-top: 1px solid #ddd;
-  flex-wrap: wrap;
-}
-
-/* Menu Styling */
+/* Fixed and styled menu button */
 .rl-menu-container {
-  position: relative;
+  position: fixed;
+  top: 65px;
+  left: 15px;
+  z-index: 1001;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease;
+}
+.rl-menu-container:hover {
+  background-color: #f7f7f7;
 }
 
 .rl-menu {
   cursor: pointer;
+  font-size: 18px;
   font-weight: 500;
-  font-size: 16px;
   color: #333;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.rl-menu:hover {
-  background-color: #e60073;
-  color: white;
 }
 
 .rl-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background: white;
-  border: 1px solid #ccc;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
   border-radius: 10px;
-  padding: 10px;
-  z-index: 10;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  animation: fadeIn 0.3s ease-in-out;
 }
-
-.rl-menu-container:hover .rl-dropdown-menu {
-  display: block;
-}
-
 .rl-dropdown-menu a {
-  display: block;
-  padding: 8px 10px;
-  color: #333;
+  padding: 8px 0;
   text-decoration: none;
-  border-radius: 6px;
-  width: 150px;
-  transition: background-color 0.3s, color 0.3s;
+  color: #333;
+  transition: all 0.2s ease;
 }
-
 .rl-dropdown-menu a:hover {
-  background-color: #e60073;
-  color: white;
+  color: #d1006b;
+  padding-left: 8px;
 }
 
-/* Search Box Styling */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main Navbar Content */
+.rl-navbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  padding-left: 60px; /* leave space for menu button */
+  margin-top: 20px;
+}
+
 .rl-search-box {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 6px 12px;
-  min-width: 200px;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 50px;
 }
-
 .rl-search-icon {
-  color: #999;
-  font-size: 18px;
+  margin-right: 5px;
 }
-
 .rl-search-box input {
   border: none;
   outline: none;
-  font-size: 14px;
-  width: 100%;
 }
 
-/* Navbar Action Buttons */
-.rl-nav-actions {
-  display: flex;
-  gap: 10px;
+/* Buttons */
+.rl-nav-actions button {
+  margin: 0 8px;
+  padding: 8px 14px;
+  background: #dfb2e3;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
-
-.rl-hover-grow {
-  transition: transform 0.2s ease;
+.rl-pulse {
+  background: #d1006b;
+  color: white;
 }
-
 .rl-hover-grow:hover {
   transform: scale(1.05);
+  transition: 0.2s ease;
 }
 
-.rl-pulse {
-  background-color: #e60073;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 8px 14px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.rl-pulse:hover {
-  transform: scale(1.1);
-}
-
-/* Navbar Icons (User & Cart) */
+/* Icons */
 .rl-nav-icons {
   display: flex;
-  gap: 12px;
+  align-items: center;
+}
+.rl-user-icon,
+.rl-cart-icon {
   font-size: 20px;
-  color: #333;
-}
-
-.rl-user-icon, .rl-cart-icon {
+  margin-left: 15px;
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
 
-.rl-user-icon:hover, .rl-cart-icon:hover {
-  transform: scale(1.1);
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .rl-navbar-main {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 60px;
+  }
 
-/* Active State for Menu */
-.rl-menu-container.active .rl-dropdown-menu {
-  display: block;
+  .rl-search-box {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .rl-nav-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .rl-nav-actions button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .rl-nav-icons {
+    margin-top: 10px;
+  }
+
+  .rl-dropdown-menu {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
 }
