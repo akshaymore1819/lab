@@ -1,0 +1,82 @@
+.no-member-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    position: relative;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .member-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 24px;
+  }
+  
+  .no-member-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #0f172a;
+  }
+  
+  .add-member-btn {
+    padding: 14px 24px;
+    border: 1px solid #003e75;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #003e75;
+    background-color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .max-member-text {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .navigation-buttons {
+    position: absolute;
+    bottom: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .previous {
+    border: 1px solid #003e75;
+    color: #003e75;
+    background: white;
+  }
+  
+  .next {
+    background-color: #0f3b6d;
+    color: white;
+    border: none;
+  }
+  
+  .arrow {
+    font-size: 14px;
+  }
+  

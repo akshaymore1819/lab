@@ -20,6 +20,10 @@ import Cancer from './Componants/HealthPackages/Cancer';
 import Package1 from './Componants/TopPackages/Package1';
 import Package2 from './Componants/TopPackages/Package2';
 import AddMemberForm from './Componants/TopPackages/AddMemberForm';
+import Upload from "./Componants/Upload";
+import HeroIntro from "./Componants/HeroIntro";
+import SaveMember from "./Componants/SaveMember";
+
 
 
 
@@ -49,6 +53,9 @@ function App() {
           <Route path="/Package1" element={<Package1/>}/>
           <Route path="/Package2" element={<Package2/>}/>
           <Route path="/AddMemberForm" element={<AddMemberForm/>}/>
+          <Route path="/Upload" element={<Upload/>}/>
+          <Route path="/HeroIntro" element={<HeroIntro/>}/>
+          <Route path="/SaveMember" element={<SaveMember/>}/>
 
 
 

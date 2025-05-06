@@ -4,48 +4,11 @@ import Home2 from "./Home2";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  
+  const [searchText, setSearchText] = useState("");
   const [currentPackageSlide, setCurrentPackageSlide] = useState(0);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
-  const carouselRef = useRef(null);
 
-  const cities = [
-    "Delhi",
-    "Mumbai",
-    "Bangalore",
-    "Hyderabad",
-    "Chennai",
-    "Kolkata",
-    "Pune",
-    "Ahmedabad",
-    "Jaipur",
-    "Chandigarh",
-    "Lucknow",
-    "Indore",
-    "Bhopal",
-    "Patna",
-    "Nagpur",
-  ];
-
-  // Toggle menu and location dropdown
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleLocationDropdown = () =>
-    setIsLocationDropdownOpen(!isLocationDropdownOpen);
-
-  // Close dropdowns on outside click
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        !event.target.closest(".menu-container") &&
-        !event.target.closest(".location-container")
-      ) {
-        setIsMenuOpen(false);
-        setIsLocationDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  
 
   const healthPackages = [
     {
@@ -103,6 +66,53 @@ const Home = () => {
       limitedPeriod: "for a limited period",
     },
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPackageSlide((prev) => (prev + 1) % healthPackages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [healthPackages.length]);
+
+  const handleSearch = (e) => {
+    if (e.key === "Enter" && searchText.trim() !== "") {
+      console.log("Searching for:", searchText);
+      setSearchText("");
+    }
+  };
+
+  useEffect(() => {
+    const animateElements = () => {
+      const elements = document.querySelectorAll(".fade-in, .slide-in, .pop-in");
+      elements.forEach((el) => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        observer.observe(el);
+      });
+    };
+
+    animateElements();
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const animatedElements = document.querySelectorAll(".scroll-animate");
+      animatedElements.forEach((element) => {
+        if (scrollPosition > element.offsetTop + 100) {
+          element.classList.add("animated");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const packages = [
     { name: "Full Body Checkup", icon: "🩺" },
     { name: "Diabetes Profile", icon: "🩸", route: "/daibetes"},
@@ -198,19 +208,28 @@ const Home = () => {
     <div className="redcliffe-app">
       {/* Hero Section */}
       <section className="hero slide-in">
-        <div className="hero-content scroll-animate">
-          <h1>Looking for a test?</h1>
-          <div className="hero-actions">
-            <button className="search-btn pulse">
-              <span className="search-icon">🔍</span> Search Tests
-            </button>
-            <button className="upload-btn hover-grow">
-              Upload Prescription
-            </button>
-            <button className="book-btn pulse hover-grow">Book a Test</button>
-          </div>
+      <div className="hero-content scroll-animate">
+        <h1>Looking for a test?</h1>
+        <div className="hero-actions">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search tests..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            onKeyDown={handleSearch}
+          />
+         <button className="upload-btn hover-grow">
+  <Link to="/upload" style={{ color: 'inherit', textDecoration: 'none' }}>
+    Upload Prescription
+  </Link>
+</button>
+<Link to="/herointro" className="book-btn pulse hover-grow">
+  Select Health Package
+</Link>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Scrollable Health Packages */}
       <section className="scroll-packages-section">
@@ -273,27 +292,26 @@ const Home = () => {
     </section>
 
       {/* Why Choose Us */}
-       {/* Why Choose Us */}
-       <section className="why-choose-us scroll-animate">
-        <h2 className="fade-in">Why Book Tests With us?</h2>
-        <div className="features">
-          <div className="feature slide-in delay-1 hover-grow">
-            <div className="icon">✓</div>
-            <h3>Fast Reports</h3>
-            <p>Get reports in as little as 15 hours</p>
-          </div>
-          <div className="feature slide-in delay-2 hover-grow">
-            <div className="icon">✓</div>
-            <h3>Affordable</h3>
-            <p>Up to 80% discount on health packages</p>
-          </div>
-          <div className="feature slide-in delay-3 hover-grow">
-            <div className="icon">✓</div>
-            <h3>Home Collection</h3>
-            <p>Free home sample collection</p>
-          </div>
-        </div>
-      </section>
+      <section className="why-choose-us scroll-animate">
+  <h2 className="fade-in">Why Book Tests With Us?</h2>
+  <div className="features">
+    <div className="feature slide-in delay-1 hover-grow">
+      <div className="icon">✓</div>
+      <h4>Certified Labs</h4>
+      <p>Get accurate test results from NABL & ICMR certified labs.</p>
+    </div>
+    <div className="feature slide-in delay-2 hover-grow">
+      <div className="icon">✓</div>
+      <h4>Free Home Sample Collection</h4>
+      <p>Sample collection from your home by trained professionals.</p>
+    </div>
+    <div className="feature slide-in delay-3 hover-grow">
+      <div className="icon">✓</div>
+      <h4>Online Reports</h4>
+      <p>Get digital reports within 15 hours directly on your phone.</p>
+    </div>
+  </div>
+</section>
 
 
       {/* Women's Health */}
@@ -347,28 +365,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      {/* <section className="testimonials scroll-animate">
-        <h2 className="fade-in">What Doctors Are Saying</h2>
-        <div className="testimonial-cards">
-          <div className="testimonial-card slide-in delay-1 hover-grow">
-            <p>"Redcliffe Labs delivers exceptional and accurate diagnostic services with a knowledgeable and dedicated team."</p>
-            <div className="doctor-info">
-              <strong>Dr. Vykunta Raju K.N</strong>
-              <span>Pediatric Neurologist, Bengaluru</span>
-            </div>
-          </div>
-          <div className="testimonial-card slide-in delay-2 hover-grow">
-            <p>"Redcliffe Labs has been an invaluable diagnostic service provider for me and my patients. Their commitment to quality is commendable."</p>
-            <div className="doctor-info">
-              <strong>Dr. Seneesh KV</strong>
-              <span>Fetal Medicine Specialist, Kerala</span>
-            </div>
-          </div>
-        </div>
-      </section> */}
+     
       <Home2 />
-      {/* <LabLocations/> */}
+     
     </div>
   );
 };
