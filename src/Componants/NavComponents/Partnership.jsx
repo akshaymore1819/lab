@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import "./Partnership.css";
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
@@ -182,43 +181,10 @@ export default function Partnership() {
           service provider?
         </h2>
         <div className="rl_partners_grid">
-          {[
-            {
-              title: "Iframes",
-              desc: "Loads another web page within the parent page, enabling faster Redcliffe service activation.",
-            },
-            {
-              title: "API and Webhooks",
-              desc: "Plug and play APIs offer convenient operations and precise scaling.",
-            },
-            {
-              title: "Ultra-Flexible Booking Tools",
-              desc: "Includes Bulk Booking, Dashboards, and Apps for seamless bookings.",
-            },
-            {
-              title: "Data is the new oil",
-              desc: "Export patient data in CSV, JSON, PDF formats for analysis or integration.",
-            },
-            {
-              title: "Pre Policy Medical Checkup module",
-              desc: "Digital KYC, Risk Assessment, MER, and 5S Check to mitigate risk.",
-            },
-            {
-              title: "Coupon Management System",
-              desc: "Design and manage one-time, multi-use, corporate-level, and dynamic coupons.",
-            },
-            {
-              title: "Customized Landing Pages",
-              desc: "Web & app pages to improve customer retention and experience.",
-            },
-            {
-              title: "Camp and Wellness Dashboard",
-              desc: "Manage camps, payments, CTA, and engagement through an integrated dashboard.",
-            },
-          ].map((item, index) => (
+          {[...Array(8)].map((_, index) => (
             <div className="rl_partners_card" key={index}>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+              <h3>{`Partner Feature ${index + 1}`}</h3>
+              <p>{`Description of feature ${index + 1}`}</p>
             </div>
           ))}
         </div>
@@ -290,7 +256,7 @@ export default function Partnership() {
                   className="partner-item"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
+                  transition={{ delay: 0.1 * i }}
                 >
                   {partner}
                 </motion.span>
@@ -302,110 +268,77 @@ export default function Partnership() {
 
       {/* Testimonials Section */}
       <section className="rl_testimonials_section">
-  <h2 className="rl_testimonials_heading">What Our Partners Say</h2>
-  <div className="rl_testimonials_wrapper">
-    <button className="scroll-arrow left" onClick={() => scrollTestimonials(-1)}>
-      &#8249;
-    </button>
-    <div className="rl_testimonials_scroll" ref={testimonialRef}>
-      {[
-        {
-          name: "John Doe",
-          designation: "CEO, ExampleCorp",
-          feedback: "This platform transformed the way we manage partnerships!",
-        },
-        {
-          name: "Jane Smith",
-          designation: "CTO, TechWorld",
-          feedback: "Reliable, easy to use, and exceptional customer service.",
-        },
-        {
-          name: "Alan Brown",
-          designation: "Head of Ops, LogisticsPro",
-          feedback: "Highly recommended for anyone looking to streamline ops.",
-        },
-        {
-          name: "Lisa Ray",
-          designation: "Marketing Head, BrightAds",
-          feedback: "An amazing experience, boosted our brand credibility.",
-        },
-        {
-          name: "Michael Lee",
-          designation: "Founder, FinSolve",
-          feedback: "Efficient, professional, and a joy to work with.",
-        },
-        {
-          name: "Priya Mehta",
-          designation: "Product Lead, InnovateX",
-          feedback: "The best partnership tool I’ve worked with so far.",
-        },
-      ].map((testimonial, index) => (
-        <div key={index} className="rl_testimonial_card">
-          <h3>{testimonial.name}</h3>
-          <h4>{testimonial.designation}</h4>
-          <p>"{testimonial.feedback}"</p>
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          What our partners say about Redcliffe Labs
+        </motion.h2>
+        <motion.div
+          ref={testimonialRef}
+          className="rl_testimonials_cards"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="rl_testimonial_card">
+              <p>{testimonial.feedback}</p>
+              <h3>{testimonial.name}</h3>
+              <p>{testimonial.designation}</p>
+            </div>
+          ))}
+        </motion.div>
+        <div className="testimonial-nav">
+          <button onClick={() => scrollTestimonials(-1)}>&#8592;</button>
+          <button onClick={() => scrollTestimonials(1)}>&#8594;</button>
         </div>
-      ))}
-    </div>
-    <button className="scroll-arrow right" onClick={() => scrollTestimonials(1)}>
-      &#8250;
-    </button>
-  </div>
-</section>
-
-
-
+      </section>
 
       {/* Contact Form Section */}
-    <section className="partners-contact-section">
-  <motion.div
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1.0, ease: "easeInOut" }}
-    viewport={{ once: true }}
-    className="contact-wrapper"
-  >
-    <h2>Get In Touch</h2>
-    <p>
-      Feel free to reach out for any partnership enquiries. Fill the form
-      so our experts can get back to you.
-    </p>
-    <motion.form
-      className="partners-contact-form"
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
-      viewport={{ once: true }}
-    >
-      <input type="text" placeholder="Enter Name" />
-      <input type="text" placeholder="Enter Phone Number" />
-      <input type="email" placeholder="Enter Your Email Id" />
-      <textarea placeholder="Start typing here..."></textarea>
-      <motion.button 
-        type="submit" 
-        whileHover={{ scale: 1.05, backgroundColor: "#0044cc" }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ duration: 0.3 }}
-      >
-        Submit
-      </motion.button>
-    </motion.form>
-  </motion.div>
-</section>
-
-
+      <section className="rl_contact_form_section">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          Get in Touch
+        </motion.h2>
+        <form
+          className="contact-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            console.log("Form submitted!");
+          }}
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            className="contact-form-input"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            className="contact-form-input"
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+            className="contact-form-textarea"
+          />
+          <button type="submit" className="contact-form-button">
+            Submit
+          </button>
+        </form>
+      </section>
     </div>
   );
-=======
-import React from 'react'
-
-export default function Partnership() {
-  return (
-    <div>
-      <h2>
-        Partnership Page
-      </h2>
-    </div>
-  )
->>>>>>> origin/master
 }

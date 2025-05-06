@@ -54,7 +54,7 @@ const Home = () => {
       time: "Reports in 15 hours | Parameters 99",
       tests: [
         <Link to="/Package2"> CBC</Link> ,
-        <Link to="/AddMemberForm">  Blood Sugar</Link> ,
+        <Link to="/Package1">  Blood Sugar</Link> ,
         <Link to="/Package1">  Lipid Profile</Link> ,
         <Link to="/Package1"> Liver Function</Link> ,
         <Link to="/Package1"> Kidney Function</Link> ,
@@ -114,24 +114,24 @@ const Home = () => {
   }, []);
 
   const packages = [
-    { name: "Full Body Checkup", icon: "🩺" },
+    { name: "Full Body Checkup", icon: "🩺", route: "/fullbody" },
     { name: "Diabetes Profile", icon: "🩸", route: "/daibetes"},
-    { name: "Heart Health", icon: "❤️"},
-    { name: "Fever", icon: "🤒" },
-    { name: "Kidney Health", icon: "🧫" },
+    { name: "Heart Health", icon: "❤️", route: "/heart" },
+    { name: "Fever", icon: "🤒", route: "/fever" },
+      { name: "Vitamin Support", icon: "💊", route: "/vitamin" },
     { name: "Thyroid Panel", icon: "🦋" ,route:"/Thyroide" },
-    { name: "Immunity Test", icon: "🛡️" },
-    { name: "COVID-19 RTPCR", icon: "🦠" },
-    { name: "Vitamin D & B12", icon: "💊" },
-    { name: "Pregnancy Profile", icon: "🤰" },
+   
+    { name: "Pregnancy", icon: "🤰", route: "/pregnancy" },
+    { name: "Fertility", icon: "🧬", route: "/fertility" },
     { name: "Hormone Panel", icon: "🧬",route:"/Hormone" },
     { name: "Allergy Screening", icon: "🌼",route:"/Allergy" },
-    { name: "Arthritis Panel", icon: "🦴" },
+    { name: "Lifestyle", icon: "🏃‍♂️", route: "/lifestyle" },
     { name: "Cancer Screening", icon: "🎗️",route:"/Cancer" },
-    { name: "Lipid Profile", icon: "🥑" },
-    { name: "Senior Citizen Care", icon: "👴" },
-    { name: "Women’s Wellness", icon: "💃" },
-    { name: "Men’s Health", icon: "🕺" },
+    { name: "STD", icon: "🛡️", route: "/std" },
+    { name: "Combo", icon: "🎯", route: "/combo" },
+    { name: "Arthritis", icon: "🦴", route: "/arthritis" },
+    { name: "Anemia", icon: "🩸", route: "/anemia" },
+    { name: "Antenatal", icon: "🤰", route: "/antental" },
   ];
   const womensPackages = [
     {

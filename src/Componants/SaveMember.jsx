@@ -16,7 +16,7 @@ const SaveMember = () => {
 
         <p className="max-member-text">Max.15 member can be added</p>
       </div>
-      <div className="navigation-buttons">
+      <div className="git pull origin mainnavigation-buttons">
         <button className="nav-btn previous">
           Previous <span className="arrow">⌄</span>
         </button>

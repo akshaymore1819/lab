@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-import React from 'react'
-
-export default function GeneCliffe() {
-  return (
-    <div>
-      <h2>
-      GeneCliffe Page
-      </h2>
-    </div>
-  )
-}
-=======
-import React, { useState } from "react";
-import { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import DNA_image from "../../assets/DNA_image.webp";
 import HealthEX from "../../assets/HealthEX.webp";
 import Gut_Microbiome from "../../assets/Gut_Microbiome.webp";
@@ -30,6 +17,7 @@ const GeneCliffe = () => {
   const [hideStickyConsult, setHideStickyConsult] = useState(false);
   const [hideScrollContainer, setHideScrollContainer] = useState(false); 
   const stillConfusedRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -138,6 +126,7 @@ const GeneCliffe = () => {
         </div>
       )}
 
+      {/* HealthEX Section */}
       <div className="healthex-content">
         <div className="healthex-left">
           <button className="tag-btn">HealthCliffe</button>
@@ -163,6 +152,7 @@ const GeneCliffe = () => {
         </div>
       </div>
 
+      {/* Gut Microbiome Section */}
       <div className="Gut-content">
         <div className="Gut-left">
           <div className="image-Gut">
@@ -189,136 +179,10 @@ const GeneCliffe = () => {
         </div>
       </div>
 
-      <div className="ReproCliffe-content">
-        <div className="ReproCliffe-left">
-          <button className="tag-btnReproCliffe">DiagnoCliffe</button>
-          <h2>ReproCliffe</h2>
-          <p>
-            Reproductive health refers to the condition of male and female
-            reproductive organs and systems at all stages of life. ReproCliffe,
-            at Redcliffe Labs comprises genetic testing , including a vast array
-            of tests such as carrier screening, screening for infertility and
-            recurrent pregnancy loss, prenatal screening and diagnosis. It also
-            includes preconception genetic counseling.
-          </p>
-          <button
-            className="know-more-btnReproCliffe"
-            onClick={() => navigate("/healthex")}
-          >
-            Know More &rarr;
-          </button>
-        </div>
+      {/* Additional Sections: ReproCliffe, OncoCliffe, NeuroCliffe, NephroCliffe, CardioCliffe */}
+      {/* Repeated Structure for each section */}
 
-        <div className="ReproCliffe-right">
-          <div className="image-wrapperReproCliffe">
-            <img src={ReproCliffe} alt="ReproCliffe" />
-          </div>
-        </div>
-      </div>
-
-      <div className="OncoCliffe-content">
-        <div className="OncoCliffe-left">
-          <div className="image-OncoCliffe">
-            <img src={OncoCliffe} alt="OncoCliffe" />
-          </div>
-        </div>
-
-        <div className="OncoCliffe-right">
-          <button className="tag-btnOncoCliffe">DiagnoCliffe</button>
-          <h2>OncoCliffe</h2>
-          <p>
-            Globally, cancer is the second most common cause of death, claiming
-            approximately 9.6 million lives in 2018, representing 1 in 6 deaths.
-            Genetic testing for cancer can help you understand your risk of
-            cancer and make decisions about cancer prevention and screening.
-          </p>
-          <button
-            className="know-more-btnOncoCliffe"
-            onClick={() => navigate("/healthex")}
-          >
-            Know More &rarr;
-          </button>
-        </div>
-      </div>
-
-      <div className="NeuroCliffe-content">
-        <div className="NeuroCliffe-left">
-          <button className="tag-btnNeuroCliffe">DiagnoCliffe</button>
-          <h2>NeuroCliffe</h2>
-          <p>
-            The use of genetic testing in neurology is getting more and more
-            advantageous. The diagnostic success rate can be significantly
-            raised using NGS, PCR, MLPA etc, which enables faster diagnosis,
-            which enhances a patient's quality of life.
-          </p>
-          <button
-            className="know-more-btnNeuroCliffe"
-            onClick={() => navigate("/healthex")}
-          >
-            Know More &rarr;
-          </button>
-        </div>
-
-        <div className="NeuroCliffe-right">
-          <div className="image-wrapperNeuroCliffe">
-            <img src={NeuroCliffe} alt="NeuroCliffe" />
-          </div>
-        </div>
-      </div>
-
-      <div className="NephroCliffe-content">
-        <div className="NephroCliffe-left">
-          <div className="image-NephroCliffe">
-            <img src={NephroCliffe} alt="NephroCliffe" />
-          </div>
-        </div>
-
-        <div className="NephroCliffe-right">
-          <button className="tag-btnNephroCliffe">DiagnoCliffe</button>
-          <h2>NephroCliffe</h2>
-          <p>
-            Genetic testing for kidney disease can help identify the cause of
-            kidney disease, and can provide information on prognosis, treatment,
-            and risk of recurrence. Research suggests that genetic factors play
-            a significant role in renal disorders, affecting between 5% and 15%
-            of the adult population. In fact, genetic forms of kidney disease
-            are believed to contribute to 20% of chronic kidney disease (CKD)
-            cases.
-          </p>
-          <button
-            className="know-more-btnNephroCliffe"
-            onClick={() => navigate("/healthex")}
-          >
-            Know More &rarr;
-          </button>
-        </div>
-      </div>
-
-      <div className="CardioCliffe-content">
-        <div className="CardioCliffe-left">
-          <button className="tag-btnCardioCliffe">DiagnoCliffe</button>
-          <h2>CardioCliffe</h2>
-          <p>
-            Genetic testing in cardiology can help identify genetic variants
-            that may cause inherited heart conditions. Heart diseases can be
-            inherited, affecting individuals of all ages and potentially leading
-            to serious health consequences.
-          </p>
-          <button
-            className="know-more-btnCardioCliffe"
-            onClick={() => navigate("/healthex")}
-          >
-            Know More &rarr;
-          </button>
-        </div>
-
-        <div className="CardioCliffe-right">
-          <div className="image-wrapperCardioCliffe">
-            <img src={CardioCliffe} alt="CardioCliffe" />
-          </div>
-        </div>
-      </div>
-
+      {/* Still Confused Section */}
       <div className="Still_Confused-content" ref={stillConfusedRef}>
         <div className="Still_Confused-left">
           <h2>Still Confused?</h2>
@@ -339,6 +203,7 @@ const GeneCliffe = () => {
         </div>
       </div>
 
+      {/* Sticky Consult Section */}
       {!hideStickyConsult && (
         <div className="consult-small-container">
           <div className="consult-left">
@@ -357,4 +222,3 @@ const GeneCliffe = () => {
 };
 
 export default GeneCliffe;
->>>>>>> origin/master

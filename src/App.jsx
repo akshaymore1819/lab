@@ -15,7 +15,7 @@ import Daibetes from './Componants/HealthPackages/Daibetes';
 import Quality from './Componants/NavComponents/Quality';
 import ThyroidTests from './Componants/HealthPackages/ThyroidTests';
 import HormoneTests from './Componants/HealthPackages/HormoneTests';
-import Cancer from './Componants/HealthPackages/Cancer';
+// import Cancer from './Componants/HealthPackages/Cancer';
 import Package1 from './Componants/TopPackages/Package1';
 import Package2 from './Componants/TopPackages/Package2';
 import AddMemberForm from './Componants/TopPackages/AddMemberForm';
