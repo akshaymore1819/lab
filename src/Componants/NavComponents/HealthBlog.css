@@ -1,0 +1,513 @@
+/* General Styling for the Health Blog Container */
+.healthblogs-container {
+  margin: 0 auto;
+  padding: 20px;
+  /* max-width: 1200px; */
+}
+
+/* Featured Contents Section */
+/* ========== Featured Contents Section ========== */
+.featured-section {
+  margin-bottom: 40px;
+}
+.featured-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.featured-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.featured-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.blog-text {
+  padding: 15px;
+}
+.blog-text .category {
+  font-size: 12px;
+  color: #888;
+}
+.blog-text h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.blog-text .date {
+  font-size: 12px;
+  color: #aaa;
+}
+
+
+
+
+/* ========== feature Stories Section ========== */
+
+.feature-section {
+  margin-bottom: 40px;
+}
+.feature-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.feature-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.feature-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.feature-card .blog-text {
+  padding: 15px;
+}
+.feature-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.feature-card .date {
+  font-size: 12px;
+  color: #888;
+}
+
+@media (max-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .featured-grid,
+  .webstories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== Web Stories Section ========== */
+.webstories-section {
+  margin-bottom: 40px;
+}
+.webstories-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.webstories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.webstories-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.webstories-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.webstories-card .blog-text {
+  padding: 15px;
+}
+.webstories-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.webstories-card .date {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ========== Responsive Grid ========== */
+@media (max-width: 1024px) {
+  .featured-grid,
+  .webstories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .featured-grid,
+  .webstories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Awareness Campaigns */
+.awareness-section h2 { font-size: 24px; margin-bottom: 20px; }
+.awareness-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.awareness-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; }
+.awareness-card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #ddd; }
+.awareness-card h3 { padding: 15px; }
+.awareness-author { font-size: 12px; color: #888; }
+
+/* Women's Health */
+.women-section h2 { font-size: 24px; margin-bottom: 20px; }
+.women-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.women-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; }
+.women-card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #ddd; }
+.women-card h3 { padding: 15px; }
+.women-author { font-size: 12px; color: #888; }
+
+/* Diabetes */
+.diabetes-section h2 { font-size: 24px; margin-bottom: 20px; }
+.diabetes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.diabetes-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; }
+.diabetes-card img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #ddd; }
+.diabetes-card h3 { padding: 15px; }
+.diabetes-author { font-size: 12px; color: #888; }
+
+/* Lab Test */
+/* ==== SECTION BACKGROUND COLORS ==== */
+
+.screening-section {
+  background: linear-gradient(135deg, #c2e9fb, #a1c4fd); /* Light Blue Gradient */
+  padding: 50px 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.seasonal-eating-section {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* Pink to Blue Gradient */
+  padding: 50px 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+/* ==== GRID LAYOUT ==== */
+.screening-grid,
+.seasonal-eating-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ==== CARD DESIGN ==== */
+.screening-card,
+.seasonal-card {
+  background: white;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  position: relative;
+  height: 400px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.screening-card:hover,
+.seasonal-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ==== CARD IMAGE ==== */
+.screening-card img,
+.seasonal-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ==== TEXT STYLING ==== */
+.screening-card h3,
+.seasonal-card h3 {
+  font-size: 18px;
+  padding: 10px 15px 5px;
+  color: #222;
+  font-weight: 600;
+}
+
+.screening-author,
+.seasonal-author {
+  font-size: 14px;
+  padding: 0 15px 15px;
+  color: #666;
+}
+
+
+
+
+
+/* ==== SEASONAL EATING SECTION ==== */
+.seasonal-eating-section {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* Soft pink to lavender */
+  padding: 50px 20px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+.seasonal-eating-section h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2e2e2e;
+  font-weight: 700;
+}
+
+/* ==== GRID WITH THREE CARDS PER ROW ==== */
+.seasonal-eating-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ==== CARD DESIGN ==== */
+.seasonal-card {
+  background: white;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  position: relative;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.seasonal-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ==== CARD IMAGE ==== */
+.seasonal-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ==== TEXT STYLING ==== */
+.seasonal-card h3 {
+  font-size: 18px;
+  padding: 10px 15px 5px;
+  color: #222;
+  font-weight: 600;
+}
+
+.seasonal-author {
+  font-size: 14px;
+  padding: 0 15px 15px;
+  color: #666;
+}
+
+/* ==== WAVE SHAPE BOTTOM ==== */
+.wave-shape {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: url('/assets/wave.svg') no-repeat bottom;
+  background-size: cover;
+  z-index: 2;
+}
+
+
+
+/* ==== SHARED STYLES ==== */
+.wave-shape {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: url('/assets/wave.svg') no-repeat bottom;
+  background-size: cover;
+  z-index: 2;
+}
+
+/* SMART VIDEOS SECTION */
+.video-section {
+  background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+  padding: 60px 20px 80px;
+  position: relative;
+  border-radius: 30px 30px 0 0;
+  color: #2e2e2e;
+}
+
+.video-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.video-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.video-thumb {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Play Icon */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 38px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #f57c00;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.video-card:hover .play-icon {
+  background: #ffffff;
+}
+
+/* Title */
+.video-card h3 {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Wavy Bottom */
+.video-wave-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background: url('/assets/wave-bottom.svg') no-repeat center bottom;
+  background-size: cover;
+}
+
+
+/* === KNOWLEDGE HUB SECTION === */
+.knowledge-hub-section {
+  padding: 50px 20px;
+  background: linear-gradient(to right, #ffecb3, #d1c4e9);
+}
+
+.knowledge-hub-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.knowledge-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+.knowledge-hub-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.knowledge-hub-card:hover {
+  transform: translateY(-8px);
+}
+
+.knowledge-hub-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.knowledge-hub-content {
+  padding: 15px;
+}
+
+.knowledge-hub-title {
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.knowledge-hub-author {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Optional Wavy Shape */
+.knowledge-hub-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+  transform: skewY(-5deg);
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Callback Section */
+.callback-section { text-align: center; margin-top: 40px; }
+.callback-section h2 { font-size: 24px; margin-bottom: 20px; }
+.callback-btn { padding: 12px 30px; background-color: #4CAF50; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+.callback-btn:hover { background-color: #45a049; }
+
+/* App Download */
+.app-download { margin-top: 30px; }
+.app-links a { margin: 0 10px; }
+.app-links img { width: 150px; height: 50px; }

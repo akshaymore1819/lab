@@ -1,0 +1,589 @@
+.mainanemia h1{
+    font-size: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.card-containermain1 {
+    display: flex;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.card-containeranemia {
+    max-width: 600px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 16px auto;
+    height: 40vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-containeranemia:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.title-rowanemia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card-titleanemia {
+    color: #d6336c;
+    font-size: 1.5rem;
+}
+
+.dropdown-iconanemia {
+    color: #555;
+}
+
+.priceanemia {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.original-priceanemia {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #aaa;
+    margin-left: 6px;
+}
+
+.tag-containeranemia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+.taganemia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 8px 12px;
+    height: 36px;
+    font-size: 15px;
+    color: #333;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.tag-iconanemia {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.tag-nameanemia {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-footeranemia {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #555;
+    padding-top: 0.5rem;
+}
+
+.reports-labelanemia {
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+.terms-tooltipanemia {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #555;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: underline dotted;
+}
+
+.tooltip-textanemia {
+    visibility: hidden;
+    width: 240px;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.4;
+    transition: opacity 0.2s ease;
+}
+
+.terms-tooltipanemia:hover .tooltip-textanemia {
+    visibility: visible;
+    opacity: 1;
+}
+
+.timing-infoanemia {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    font-size: 15px;
+}
+
+.timing-badgeanemia {
+    background-color: #e0f0ff;
+    color: #0077cc;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.vertical-lineanemia {
+    width: 2px;
+    height: 17px;
+    background-color: #ccc;
+    margin: 0 12px;
+}
+
+.test-countanemia {
+    color: #444;
+}
+
+.add-btnanemia {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 8rem;
+}
+
+.view-cart-btnanemia {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #007bff;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.card-containeranemia1 {
+    max-width: 600px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 16px auto;
+    height: 40vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-containeranemia1:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.title-rowanemia1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card-titleanemia1 {
+    color: #d6336c;
+    font-size: 1.5rem;
+}
+
+.dropdown-iconanemia1 {
+    color: #555;
+}
+
+.priceanemia1 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.original-priceanemia1 {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #aaa;
+    margin-left: 6px;
+}
+
+.tag-containeranemia1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+.taganemia1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 8px 12px;
+    height: 36px;
+    font-size: 15px;
+    color: #333;
+    box-sizing: border-box;
+    flex: 1 0 calc(25% - 8px);
+    min-width: 0;
+}
+
+.taganemia1.second-row {
+    flex: 1 0 calc(33.33% - 8px);
+    font-size: 15px;
+    padding: 5px 8px;
+    height: 28px;
+}
+
+.tag-iconanemia1 {
+    font-size: 14px;
+    opacity: 0.8;
+    flex-shrink: 0;
+}
+
+.tag-nameanemia1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-footeranemia1 {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #555;
+    padding-top: 0.5rem;
+}
+
+.reports-labelanemia1 {
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+.terms-tooltipanemia1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #555;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: underline dotted;
+}
+
+.tooltip-textanemia1 {
+    visibility: hidden;
+    width: 240px;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.4;
+    transition: opacity 0.2s ease;
+}
+
+.terms-tooltipanemia1:hover .tooltip-textanemia1 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.timing-infoanemia1 {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    font-size: 15px;
+}
+
+.timing-badgeanemia1 {
+    background-color: #e0f0ff;
+    color: #0077cc;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.vertical-lineanemia1 {
+    width: 2px;
+    height: 17px;
+    background-color: #ccc;
+    margin: 0 12px;
+}
+
+.test-countanemia1 {
+    color: #444;
+}
+
+.add-btnanemia1 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 8rem;
+}
+
+.view-cart-btnanemia1 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #007bff;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.test-list-cardanemia,
+.test-list-cardanemia1 {
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.test-namesanemia,
+.test-namesanemia1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.more-linkanemia1 {
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.show-more-containeranemia {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.show-more-btnanemia {
+    background-color: #fff;
+    color: #2d7ff9;
+    border: 1px solid #2d7ff9;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.show-more-btnanemia:hover {
+    background-color: #2d7ff9;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .card-containermain {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .card-containeranemia {
+        width: 100%;
+        max-width: 90%;
+        margin: 1rem auto;
+        height: auto;
+    }
+
+    .card-containeranemia:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .tag-containeranemia {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .add-btnanemia {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .view-cart-btnanemia {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainanemia h1 {
+        font-size: 1.5rem;
+        padding-top: 2rem;
+        text-align: center;
+    }
+
+    .card-containermain1 {
+        flex-direction: column;
+    }
+
+    .card-containeranemia {
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card-titleanemia {
+        color: #d6336c;
+        font-size: 1rem;
+    }
+
+    .priceanemia {
+        font-size: 1.2rem;
+    }
+
+    .original-priceanemia {
+        font-size: 1rem;
+    }
+
+    .tag-containeanemia {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-footeranemia {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .timing-infoanemia {
+        display: flex;
+        align-items: center;
+        margin-left: 16px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card-containermain1 {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .card-containeranemia1 {
+        width: 100%;
+        max-width: 90%;
+        margin: 1rem auto;
+        height: auto;
+    }
+
+    .card-containeranemia1:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .tag-containeranemia1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .add-btnanemia1 {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .view-cart-btnanemia1 {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-containermain1 {
+        flex-direction: column;
+    }
+
+    .card-containeranemia1 {
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card-titleanemia1 {
+        color: #d6336c;
+        font-size: 1rem;
+    }
+
+    .priceanemia1 {
+        font-size: 1.2rem;
+    }
+
+    .original-priceanemia1 {
+        font-size: 1rem;
+    }
+
+    .tag-containeranemia1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-footeranemia1 {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .timing-infoanemia1 {
+        margin-left: 0;
+    }
+}

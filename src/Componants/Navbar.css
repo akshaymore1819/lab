@@ -1,0 +1,221 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Styling */
+.rl-navbar {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: white;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Navbar Top Section (Brand & Location) */
+.rl-navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  background: #fff;
+  position: relative;
+}
+
+/* Brand Styling */
+.rl-brand {
+  font-weight: bold;
+  font-size: 24px;
+  color: #e60073;
+  transition: color 0.3s ease;
+}
+
+.rl-brand:hover {
+  color: #d0005f;
+}
+
+/* Location Section */
+.rl-location-container {
+  cursor: pointer;
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 5px;
+  position: absolute;
+  left: 300px;
+}
+
+.rl-location-label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.rl-location-dropdown {
+  position: absolute;
+  top: 40px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 10;
+  padding: 10px;
+  min-width: 150px;
+}
+
+.rl-city-item {
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rl-city-item:hover {
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+/* Navbar Main Section (Menu & Actions) */
+.rl-navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  flex-wrap: wrap;
+}
+
+/* Menu Styling */
+.rl-menu-container {
+  position: relative;
+}
+
+.rl-menu {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.rl-menu:hover {
+  background-color: #e60073;
+  color: white;
+}
+
+.rl-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rl-menu-container:hover .rl-dropdown-menu {
+  display: block;
+}
+
+.rl-dropdown-menu a {
+  display: block;
+  padding: 8px 10px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  width: 150px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.rl-dropdown-menu a:hover {
+  background-color: #e60073;
+  color: white;
+}
+
+/* Search Box Styling */
+.rl-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 6px 12px;
+  min-width: 200px;
+}
+
+.rl-search-icon {
+  color: #999;
+  font-size: 18px;
+}
+
+.rl-search-box input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Navbar Action Buttons */
+.rl-nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.rl-hover-grow {
+  transition: transform 0.2s ease;
+}
+
+.rl-hover-grow:hover {
+  transform: scale(1.05);
+}
+
+.rl-pulse {
+  background-color: #e60073;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.rl-pulse:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar Icons (User & Cart) */
+.rl-nav-icons {
+  display: flex;
+  gap: 12px;
+  font-size: 20px;
+  color: #333;
+}
+
+.rl-user-icon, .rl-cart-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.rl-user-icon:hover, .rl-cart-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Active State for Menu */
+.rl-menu-container.active .rl-dropdown-menu {
+  display: block;
+}
