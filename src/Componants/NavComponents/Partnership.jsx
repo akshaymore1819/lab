@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./Partnership.css";
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
@@ -395,4 +396,16 @@ export default function Partnership() {
 
     </div>
   );
+=======
+import React from 'react'
+
+export default function Partnership() {
+  return (
+    <div>
+      <h2>
+        Partnership Page
+      </h2>
+    </div>
+  )
+>>>>>>> origin/master
 }

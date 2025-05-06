@@ -1,0 +1,595 @@
+.mainvitamin h1{
+    font-size: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.card-containermainvitamin {
+    display: flex;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.card-containervitamin {
+    max-width: 600px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 16px auto;
+    height: 40vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-containervitamin:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+.title-rowvitamin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card-titlevitamin {
+    color: #d6336c;
+    font-size: 1.5rem;
+}
+
+.dropdown-iconvitamin {
+    color: #555;
+}
+
+.pricevitamin {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.original-pricevitamin {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #aaa;
+    margin-left: 6px;
+}
+
+.tag-containervitamin {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+.tagvitamin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 8px 12px;
+    height: 36px;
+    font-size: 15px;
+    color: #333;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.tag-iconvitamin {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.tag-namevitamin {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-footervitamin {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #555;
+    padding-top: 0.5rem;
+}
+
+.reports-labelvitamin {
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+.terms-tooltipvitamin {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #555;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: underline dotted;
+}
+
+.tooltip-textvitamin {
+    visibility: hidden;
+    width: 240px;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.4;
+    transition: opacity 0.2s ease;
+}
+
+.terms-tooltipvitamin:hover .tooltip-textvitamin {
+    visibility: visible;
+    opacity: 1;
+}
+
+.timing-infovitamin {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    font-size: 15px;
+}
+
+.timing-badgevitamin {
+    background-color: #e0f0ff;
+    color: #0077cc;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.vertical-linevitamin {
+    width: 2px;
+    height: 17px;
+    background-color: #ccc;
+    margin: 0 12px;
+}
+
+.test-countvitamin {
+    color: #444;
+}
+
+.add-btnvitamin {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 8rem;
+}
+
+.view-cart-btnvitamin {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #007bff;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+
+.card-containervitamin1 {
+    max-width: 600px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 16px auto;
+    height: 40vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-containervitamin1:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.title-rowvitamin1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card-titlevitamin1 {
+    color: #d6336c;
+    font-size: 1.5rem;
+}
+
+.dropdown-iconvitamin1 {
+    color: #555;
+}
+
+.pricevitamin1 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.original-pricevitamin1 {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #aaa;
+    margin-left: 6px;
+}
+
+.tag-containervitamin1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+
+}
+
+.tagvitamin1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 8px 12px;
+    height: 36px;
+    font-size: 15px;
+    color: #333;
+    box-sizing: border-box;
+    flex: 1 0 calc(25% - 8px);
+    min-width: 0;
+}
+
+.tagvitamin1.second-row {
+    flex: 1 0 calc(33.33% - 8px);
+    font-size: 15px;
+    padding: 5px 8px;
+    height: 28px;
+}
+
+.tag-iconvitamin1 {
+    font-size: 14px;
+    opacity: 0.8;
+    flex-shrink: 0;
+}
+
+.tag-namevitamin1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-footervitamin1 {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #555;
+    padding-top: 0.5rem;
+}
+
+.reports-labelvitamin1 {
+    margin-right: 6px;
+    font-size: 15px;
+}
+
+.terms-tooltipvitamin1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #555;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: underline dotted;
+}
+
+.tooltip-textvitamin1 {
+    visibility: hidden;
+    width: 240px;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.4;
+    transition: opacity 0.2s ease;
+}
+
+.terms-tooltipvitamin1:hover .tooltip-textvitamin1 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.timing-infovitamin1 {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    font-size: 15px;
+}
+
+.timing-badgevitamin1 {
+    background-color: #e0f0ff;
+    color: #0077cc;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.vertical-linevitamin1 {
+    width: 2px;
+    height: 17px;
+    background-color: #ccc;
+    margin: 0 12px;
+}
+
+.test-countvitamin1 {
+    color: #444;
+}
+
+.add-btnvitamin1 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 8rem;
+}
+
+.view-cart-btnvitamin1 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #007bff;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.test-list-cardvitamin1 {
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.test-namesvitamin1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.more-linkvitamin1 {
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+.show-more-containervitamin {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .show-more-btnvitamin {
+    background-color: #fff;
+    color: #2d7ff9;
+    border: 1px solid #2d7ff9;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .show-more-btnvitamin:hover {
+    background-color: #2d7ff9;
+    color: white;
+  }
+
+
+@media (max-width: 1024px) {
+    .card-containermainvitamin {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .card-containervitamin {
+        width: 100%;
+        max-width: 90%;
+        margin: 1rem auto;
+        height: auto;
+    }
+
+    .card-containervitamin:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .tag-containervitamin {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .add-btnvitamin {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .view-cart-btnvitamin {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainvitamin h1{
+        font-size: 1.5rem;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    
+    .card-containermainvitamin {
+        flex-direction: column;
+    }
+
+    .card-containervitamin {
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card-titlevitamin {
+        color: #d6336c;
+        font-size: 1rem;
+    }
+
+    .pricevitamin {
+        font-size: 1.2rem;
+    }
+
+    .original-pricevitamin {
+        font-size: 1rem;
+    }
+
+    .tag-containevitamin {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-footervitamin {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .timing-infovitamin {
+       
+        display: flex;
+        align-items: center;
+        margin-left: 16px;
+        font-size: 15px;
+    }
+
+}
+
+
+
+@media (max-width: 1024px) {
+    .card-containermainvitamin {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .card-containervitamin1 {
+        width: 100%;
+        max-width: 90%;
+        margin: 1rem auto;
+        height: auto;
+    }
+
+    .card-containervitamin1:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .tag-containervitamin1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .add-btnvitamin1 {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .view-cart-btnvitamin1 {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-containermainvitamin {
+        flex-direction: column;
+    }
+
+    .card-containervitamin1 {
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card-titlevitamin1 {
+        color: #d6336c;
+        font-size: 1rem;
+    }
+
+    .pricevitamin1 {
+        font-size: 1.2rem;
+    }
+
+    .original-pricevitamin1 {
+        font-size: 1rem;
+    }
+
+    .tag-containervitamin1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-footervitamin1 {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .timing-infovitamin1 {
+        margin-left: 0;
+    }
+
+}

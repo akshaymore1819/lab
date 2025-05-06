@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import './Coverage.css';
 import { motion } from 'framer-motion';
@@ -194,3 +195,16 @@ const Coverage = () => {
 };
 
 export default Coverage;
+=======
+import React from 'react'
+
+export default function Coverage() {
+  return (
+    <div>
+      <h2>
+      Medical Coverage Page
+      </h2>
+    </div>
+  )
+}
+>>>>>>> origin/master
