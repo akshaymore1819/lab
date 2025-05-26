@@ -325,14 +325,17 @@ const Home = () => {
         </div>
         <div className="categories fade-in">
           {[
-            "All",
-            "Wellness",
-            "Pcos/PCOD",
-            "Sexual Health",
-            "Menstrual Health",
-            "Pregnancy",
-            "Cancer",
-            "Infertility",
+           <Link to= "Cancer">All</Link>,
+           <Link to ="Cancer">Wellness</Link>,
+            <Link to ="Cancer">Pcos/PCOD</Link>,
+             <Link to ="Cancer">Sexual Health</Link>,
+              <Link to ="Cancer">Menstrual Health</Link>,
+
+            <Link to="Pregnancy">Pregnancy</Link>,
+            
+        <Link to="Cancer">Cancer</Link>,
+         <Link to ="Cancer">Infertility</Link>,
+          
           ].map((cat, index) => (
             <button
               key={index}
@@ -373,3 +376,4 @@ const Home = () => {
 };
 
 export default Home;
+
