@@ -1,0 +1,465 @@
+/* Base Styles */
+.ahc-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.ahc-header-section {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.ahc-booking-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.ahc-main-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.ahc-home-collection-badge {
+  background-color: #f0f7ff;
+  color: #0066cc;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Package Description */
+.ahc-package-description {
+  margin-bottom: 25px;
+}
+
+.ahc-package-text {
+  font-size: 16px;
+  color: #444;
+}
+
+.ahc-savings-badge {
+  color: #009900;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+/* Action Buttons */
+.ahc-action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.ahc-add-to-cart, .ahc-book-now {
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.ahc-add-to-cart {
+  background-color: #fff;
+  color: #0066cc;
+  border: 1px solid #0066cc;
+}
+
+.ahc-book-now {
+  background-color: #0066cc;
+  color: white;
+}
+
+/* Key Features */
+.ahc-key-features {
+  margin-bottom: 30px;
+}
+
+.ahc-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.ahc-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.ahc-feature-icon {
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* Discount Section */
+.ahc-discount-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.ahc-discount-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.ahc-discount-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.ahc-discount-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.ahc-discount-percent {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0066cc;
+}
+
+.ahc-discount-desc {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.ahc-discount-price {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ahc-original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.ahc-age-group {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.ahc-age-label {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.ahc-discount-note {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Sample Report Section */
+.ahc-sample-report {
+  margin-bottom: 40px;
+}
+
+.ahc-view-sample-btn {
+  background-color: transparent;
+  border: 1px solid #0066cc;
+  color: #0066cc;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.ahc-report-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+}
+
+.ahc-report-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.ahc-report-logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: #0066cc;
+  margin-right: 15px;
+}
+
+.ahc-report-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.ahc-report-desc {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.ahc-view-report-btn {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Tests Section */
+.ahc-tests-section {
+  background-color: #f5f9ff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.ahc-tests-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ahc-labs-logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0066cc;
+  margin-bottom: 10px;
+}
+
+.ahc-tests-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.ahc-tests-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ahc-tests-number {
+  color: #0066cc;
+}
+
+.ahc-tests-plus {
+  color: #0066cc;
+}
+
+.ahc-tests-free {
+  color: #333;
+}
+
+.ahc-tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.ahc-test-category {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.ahc-test-category-name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Guarantee Banner */
+.ahc-guarantee-banner {
+  background-color: #0066cc;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.ahc-guarantee-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.ahc-savings-text {
+  font-size: 16px;
+}
+
+/* Brand Section */
+.ahc-brand-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ahc-brand-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.ahc-brand-desc {
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.ahc-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.ahc-stat-item {
+  background-color: #f5f9ff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.ahc-stat-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0066cc;
+  margin-bottom: 5px;
+}
+
+.ahc-stat-label {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Detailed Tests */
+.ahc-detailed-tests {
+  margin-bottom: 40px;
+}
+
+.ahc-detailed-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ahc-detailed-subtitle {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.ahc-test-details {
+  margin-bottom: 30px;
+}
+
+.ahc-test-group {
+  font-size: 18px;
+  color: #0066cc;
+  margin-bottom: 15px;
+}
+
+.ahc-test-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.ahc-test-list li {
+  font-size: 14px;
+  padding: 5px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+/* CTA Section */
+.ahc-cta-section {
+  background-color: #f5f9ff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ahc-price-box {
+  margin-bottom: 20px;
+}
+
+.ahc-price-label {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.ahc-price-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0066cc;
+  margin-bottom: 15px;
+}
+
+.ahc-book-now-btn {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ahc-cta-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .ahc-features-grid, .ahc-discount-grid, .ahc-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ahc-action-buttons {
+    flex-direction: column;
+  }
+  
+  .ahc-main-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ahc-container {
+    padding: 15px;
+  }
+  
+  .ahc-tests-grid {
+    grid-template-columns: 1fr;
+  }
+}

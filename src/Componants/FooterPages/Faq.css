@@ -1,0 +1,157 @@
+/* FAQ.css */
+.faq-container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+  }
+  
+  .faq-section {
+    margin-bottom: 3rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .faq-section h2 {
+    color: #3498db;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-item.active {
+    border-color: #3498db;
+  }
+  
+  .question {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .question:hover {
+    background-color: #f1f4f6;
+  }
+  
+  .question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    flex: 1;
+  }
+  
+  .toggle-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    color: #3498db;
+    min-width: 30px;
+    text-align: center;
+  }
+  
+  .answer {
+    padding: 1.5rem;
+    background: white;
+    line-height: 1.7;
+    color: #666;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .app-section {
+    margin-top: 4rem;
+    background: #3498db;
+    border-radius: 15px;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .app-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .app-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .download-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .android-button,
+  .ios-button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .android-button {
+    background: #ffffff;
+    color: #3498db;
+  }
+  
+  .ios-button {
+    background: #2c3e50;
+    color: white;
+  }
+  
+  .android-button:hover,
+  .ios-button:hover {
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .faq-container {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .faq-section {
+      padding: 1rem;
+    }
+  
+    .faq-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .download-buttons {
+      flex-direction: column;
+    }
+  
+    .question h3 {
+      font-size: 1rem;
+    }
+  }

@@ -1,0 +1,138 @@
+/* Diabetes.css */
+
+.diabetes-main-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.diabetes-section-container {
+  margin-bottom: 60px;
+}
+
+.diabetes-section-heading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.diabetes-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.diabetes-test-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+
+.diabetes-test-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.diabetes-test-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.diabetes-test-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  min-height: 60px;
+}
+
+.diabetes-test-pricing {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+  align-items: baseline;
+}
+
+.diabetes-test-price {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.diabetes-test-original {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.diabetes-test-meta {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.diabetes-add-btn {
+  padding: 8px 16px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.diabetes-add-btn:hover {
+  background-color: #b71c1c;
+}
+
+.diabetes-show-more-wrap {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.diabetes-show-more-btn {
+  padding: 10px 24px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.diabetes-show-more-btn:hover {
+  background-color: #1f5f8c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .diabetes-section-heading {
+    font-size: 24px;
+  }
+
+  .diabetes-test-title {
+    font-size: 16px;
+  }
+
+  .diabetes-test-desc {
+    font-size: 13px;
+  }
+
+  .diabetes-test-price {
+    font-size: 16px;
+  }
+
+  .diabetes-add-btn {
+    width: 100%;
+    padding: 10px 0;
+  }
+}

@@ -115,7 +115,7 @@ const Home = () => {
 
   const packages = [
     { name: "Full Body Checkup", icon: "🩺", route: "/fullbody" },
-    { name: "Diabetes Profile", icon: "🩸", route: "/daibetes"},
+    { name: "Diabetes Profile", icon: "🩸", route: "/Diabetes"},
     { name: "Heart Health", icon: "❤️", route: "/heart" },
     { name: "Fever", icon: "🤒", route: "/fever" },
       { name: "Vitamin Support", icon: "💊", route: "/vitamin" },

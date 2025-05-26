@@ -381,215 +381,174 @@
   }
 
 
-  .rl_testimonials_section {
-    background: #f9f9f9;
+  /* Testimonials Section */
+  .rlp_testimonials_section {
     padding: 60px 20px;
+    background: linear-gradient(to right, #f9f9f9, #ffffff);
     text-align: center;
-  }
-  
-  .rl_testimonials_heading {
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: #333;
-  }
-  
-  .rl_testimonials_wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    overflow: hidden;
   }
   
-  .scroll-arrow {
-    background: #fff;
-    border: 1px solid #ccc;
-    font-size: 24px;
-    padding: 10px 15px;
-    cursor: pointer;
+  .rlp_testimonials_title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .rlp_testimonials_title span {
+    color: #e91e63;
+  }
+  
+  .rlp_testimonials_controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .rlp_testimonials_controls button {
+    font-size: 2rem;
+    border: none;
+    background: #e91e63;
+    color: white;
+    padding: 5px 15px;
     border-radius: 50%;
-    transition: background 0.3s;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
-
-
-
   
-  .rl_testimonials_section {
-  background: #f9f9f9;
+  .rlp_testimonials_controls button:hover {
+    background: #c2185b;
+  }
+  
+  .rlp_testimonials_slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+  }
+  
+  .rlp_testimonial_card {
+    min-width: 320px;
+    max-width: 340px;
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: left;
+    transition: 0.3s;
+    position: relative;
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: auto;
+  }
+  
+  .quote_mark {
+    font-size: 40px;
+    color: #e91e63;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-family: Georgia, serif;
+  }
+  
+  .testimonial_feedback {
+    font-size: 1rem;
+    color: #444;
+    margin: 40px 0 20px;
+    line-height: 1.6;
+  }
+  
+  .testimonial_author {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .testimonial_author strong {
+    display: block;
+    color: #222;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+  
+/* Contact Section */
+.rlp_contact_section {
+  background: linear-gradient(135deg, #f0f7ff, #d9eaff);
   padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.rl_testimonials_heading {
-  font-size: 32px;
+.rlp_contact_title {
+  font-size: 2rem;
+  color: #0044cc;
   margin-bottom: 30px;
-  color: #333;
+  font-weight: bold;
 }
 
-.rl_testimonials_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+.rlp_contact_form {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.scroll-arrow {
-  background: #fff;
+.rlp_contact_input,
+.rlp_contact_textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
   border: 1px solid #ccc;
-  font-size: 24px;
-  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.rlp_contact_input:focus,
+.rlp_contact_textarea:focus {
+  border-color: #0044cc;
+  outline: none;
+}
+
+.rlp_contact_button {
+  width: 100%;
+  padding: 14px;
+  background: #0044cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 50%;
-  transition: background 0.3s;
-  z-index: 1;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.scroll-arrow:hover {
-  background: #eaeaea;
+.rlp_contact_button:hover {
+  background: #0033a0;
 }
 
-.rl_testimonials_scroll {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 16px;
-  padding: 10px;
-  margin: 0 20px;
-  scrollbar-width: none; /* Firefox */
+.rlp_contact_button:active {
+  transform: scale(0.97);
 }
 
-.rl_testimonials_scroll::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+/* Responsive */
+@media (max-width: 768px) {
+  .rlp_testimonials_slider {
+    gap: 12px;
+  }
+
+  .rlp_testimonial_card {
+    min-width: 220px;
+    padding: 20px;
+  }
+
+  .rlp_contact_form {
+    padding: 20px;
+  }
 }
-
-.rl_testimonial_card {
-  min-width: 250px;
-  max-width: 250px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-  text-align: left;
-}
-
-.rl_testimonial_card:hover {
-  transform: translateY(-5px);
-}
-
-.rl_testimonial_card h3 {
-  margin: 0;
-  font-size: 18px;
-  color: #2c3e50;
-}
-
-.rl_testimonial_card h4 {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #7f8c8d;
-}
-
-.rl_testimonial_card p {
-  font-size: 14px;
-  color: #555;
-  margin-top: 10px;
-}
-
-  .scroll-arrow {
-    font-size: 2.2rem;
-    background: none;
-    border: none;
-    color: #555;
-    cursor: pointer;
-    padding: 0 1rem;
-    z-index: 2;
-  }
-  
-  .scroll-arrow:hover {
-    color: #000;
-  }
-
-
-  
-  .partners-contact-section {
-    background: linear-gradient(135deg, #f0f7ff, #d9eaff);
-    padding: 50px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .contact-wrapper {
-    max-width: 600px;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .contact-wrapper:hover {
-    transform: scale(1.02);
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #0044cc;
-    font-weight: 700;
-  }
-  
-  p {
-    color: #555;
-    font-size: 1rem;
-    margin-bottom: 30px;
-  }
-  
-  .partners-contact-form input,
-  .partners-contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-  }
-  
-  .partners-contact-form input:focus,
-  .partners-contact-form textarea:focus {
-    outline: none;
-    border-color: #0044cc;
-  }
-  
-  .partners-contact-form button {
-    width: 100%;
-    padding: 15px;
-    background-color: #0044cc;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .partners-contact-form button:hover {
-    background-color: #0033a0;
-  }
-  
-  .partners-contact-form button:active {
-    transform: scale(0.98);
-  }
-  
-  @media (max-width: 768px) {
-    .partners-contact-section {
-      padding: 30px 15px;
-    }
-    .contact-wrapper {
-      padding: 20px;
-    }
-  }
-  

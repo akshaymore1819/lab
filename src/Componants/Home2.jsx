@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import "./Home2.css";
+import { Link } from 'react-router-dom';
+
 
 import img1 from '../assets/young.jpg';
 import img2 from '../assets/midyoung.jpg';
@@ -40,7 +42,7 @@ const Home2 = () => {
       {/* 1. Top Banner */}
       <section className="home2-top-banner home2-animate-on-scroll">
         <div className="home2-banner-content">
-          <h1><span>Redcliffe Labs</span> - Healthy India ki Trusted Lab</h1>
+          <h1><span>Hospital Labs</span> - Healthy India ki Trusted Lab</h1>
           <p>Giving India the right to quality diagnostics.</p>
           <div className="home2-stats-grid">
             {[
@@ -66,7 +68,9 @@ const Home2 = () => {
         <div className="home2-package-left">
           <h2>Create Your Own Package</h2>
           <p>Choose your tests and get extra 10% OFF</p>
-          <button className="home2-pulse">Create Now ➜</button>
+          <Link to="/Create">
+  <button className="home2-pulse">Create Now ➜</button>
+</Link>
         </div>
         <div className="home2-package-right">
           <div className="home2-emoji-box">👩‍⚕️</div>
@@ -82,7 +86,9 @@ const Home2 = () => {
               <div className="home2-tag">Free hsCRP</div>
               <h4>Package {i + 1}</h4>
               <p>Rs. 1599/- <span>70% OFF</span></p>
-              <button className="home2-hover-grow">Book Now</button>
+             <Link to="/AnnualHealthPackage">
+               <button className="home2-hover-grow">Book Now</button>
+             </Link>
               <p className="home2-recommend">Recommended for Mothers</p>
             </div>
           ))}
@@ -144,7 +150,9 @@ const Home2 = () => {
           <div className="home2-checkup-box">
             <div className="home2-checkup-header">
               <h3>Routine health checkups for men</h3>
-              <a href="#">View All &gt;</a>
+             <Link to="/MenHealthCheckup" className="view-all-link">
+               View All &gt;
+              </Link>
             </div>
             <div className="home2-checkup-list">
               {[
@@ -192,27 +200,83 @@ const Home2 = () => {
 
       {/* 8. Testimonials */}
       <section className="home2-testimonials home2-animate-on-scroll">
-        <h3>What Doctors Are Saying</h3>
-        <div className="home2-testimonial-cards">
-          {[...Array(3)].map((_, i) => (
-            <div className="home2-testimonial home2-hover-grow" key={i}>
-              <p>"Redcliffe Labs provides reliable reports and timely care."</p>
-              <p className="home2-doc-name">Dr. Jane Doe</p>
-              <p className="home2-doc-title">Pathologist</p>
-            </div>
+  <div className="home2-testimonials-header">
+    <h3>What Doctors Are Saying</h3>
+    <div className="home2-medical-icon">🩺</div>
+    <div className="home2-pulse-dot home2-pulse-dot-1"></div>
+    <div className="home2-pulse-dot home2-pulse-dot-2"></div>
+  </div>
+  
+  <div className="home2-testimonial-cards">
+    {[
+      {
+        quote: "Hospital Labs provides the most reliable reports with exceptional accuracy. Their turnaround time has significantly improved our diagnostic workflow.",
+        name: "Dr. Jane Doe",
+        title: "Chief Pathologist, AIIMS",
+        rating: 5,
+        photo: "👩‍⚕️"
+      },
+      {
+        quote: "I've been recommending Redcliffe Labs to my patients for years. Their commitment to quality and patient care is unmatched in the industry.",
+        name: "Dr. Rajesh Kumar",
+        title: "Senior Physician, Apollo Hospitals",
+        rating: 5,
+        photo: "👨‍⚕️"
+      },
+      {
+        quote: "The precision of Hospitals's test results has been invaluable for our critical care unit. Their 24/7 emergency services are a lifesaver.",
+        name: "Dr. Priya Sharma",
+        title: "Critical Care Specialist",
+        rating: 4,
+        photo: "🧑‍⚕️"
+      }
+    ].map((testimonial, index) => (
+      <div className={`home2-testimonial-card home2-card-${index + 1}`} key={index}>
+        <div className="home2-testimonial-photo">{testimonial.photo}</div>
+        <div className="home2-testimonial-rating">
+          {[...Array(5)].map((_, i) => (
+            <span key={i} className={i < testimonial.rating ? "home2-star-filled" : "home2-star-empty"}>
+              {i < testimonial.rating ? "★" : "☆"}
+            </span>
           ))}
         </div>
-      </section>
-
-      {/* 9. Awards */}
-      <section className="home2-awards home2-animate-on-scroll">
-        <h3>Awards & Recognition 🏆</h3>
-        <div className="home2-award-cards">
-          {[...Array(4)].map((_, i) => (
-            <div className="home2-award-card home2-hover-rotate" key={i}>🏅 Award {i + 1}</div>
-          ))}
+        <blockquote className="home2-testimonial-quote">"{testimonial.quote}"</blockquote>
+        <div className="home2-testimonial-author">
+          <p className="home2-doc-name">{testimonial.name}</p>
+          <p className="home2-doc-title">{testimonial.title}</p>
         </div>
-      </section>
+        <div className="home2-testimonial-quote-icon">❝</div>
+      </div>
+    ))}
+  </div>
+</section>
+     {/* 9. Awards */}
+<section className="home2-awards home2-animate-on-scroll">
+  <div className="home2-awards-header">
+    <h3>Awards & Recognition</h3>
+    <div className="home2-trophy-icon">🏆</div>
+    <div className="home2-sparkle home2-sparkle-1">✨</div>
+    <div className="home2-sparkle home2-sparkle-2">✨</div>
+  </div>
+  
+  <div className="home2-award-cards">
+    {[
+      { id: 1, name: "Excellence in Innovation", year: "2023", icon: "💡" },
+      { id: 2, name: "Best Customer Service", year: "2022", icon: "🤝" },
+      { id: 3, name: "Top Industry Leader", year: "2021", icon: "🏅" },
+      { id: 4, name: "Quality Assurance", year: "2020", icon: "✅" }
+    ].map((award) => (
+      <div className="home2-award-card home2-hover-grow" key={award.id}>
+        <div className="home2-award-icon">{award.icon}</div>
+        <div className="home2-award-content">
+          <h4>{award.name}</h4>
+          <p>{award.year}</p>
+        </div>
+        <div className="home2-award-ribbon">🏆</div>
+      </div>
+    ))}
+  </div>
+</section>
 
     </div>
   );

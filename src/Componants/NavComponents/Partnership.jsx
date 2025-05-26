@@ -267,78 +267,126 @@ export default function Partnership() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="rl_testimonials_section">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-        >
-          What our partners say about Redcliffe Labs
-        </motion.h2>
-        <motion.div
-          ref={testimonialRef}
-          className="rl_testimonials_cards"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="rl_testimonial_card">
-              <p>{testimonial.feedback}</p>
-              <h3>{testimonial.name}</h3>
-              <p>{testimonial.designation}</p>
-            </div>
-          ))}
-        </motion.div>
-        <div className="testimonial-nav">
-          <button onClick={() => scrollTestimonials(-1)}>&#8592;</button>
-          <button onClick={() => scrollTestimonials(1)}>&#8594;</button>
-        </div>
-      </section>
+   
+<section className="rlp_testimonials_section">
+  <motion.h2
+    initial={{ opacity: 0, y: -30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+    className="rlp_testimonials_title"
+  >
+    What our partners say about <span>Redcliffe Labs</span>
+  </motion.h2>
 
-      {/* Contact Form Section */}
-      <section className="rl_contact_form_section">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+  <div className="rlp_testimonials_controls">
+    <motion.button
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={() => scrollTestimonials(-1)}
+    >
+      ‹
+    </motion.button>
+    <motion.button
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={() => scrollTestimonials(1)}
+    >
+      ›
+    </motion.button>
+  </div>
+
+  <motion.div
+    ref={testimonialRef}
+    className="rlp_testimonials_slider"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
+  >
+    {testimonials.map((testimonial, index) => (
+      <motion.div
+        key={index}
+        className="rlp_testimonial_card"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.15)" }}
+        transition={{ duration: 0.5, delay: index * 0.2 }}
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="quote_mark"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Get in Touch
-        </motion.h2>
-        <form
-          className="contact-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            console.log("Form submitted!");
-          }}
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-            className="contact-form-input"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-            className="contact-form-input"
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            required
-            className="contact-form-textarea"
-          />
-          <button type="submit" className="contact-form-button">
-            Submit
-          </button>
-        </form>
-      </section>
+          “
+        </motion.div>
+        <p className="testimonial_feedback">{testimonial.feedback}</p>
+        <div className="testimonial_author">
+          <strong>{testimonial.name}</strong>
+          <span>{testimonial.designation}</span>
+        </div>
+      </motion.div>
+    ))}
+  </motion.div>
+</section>
+
+{/* Contact Form Section */}
+<section className="rlp_contact_section">
+  <motion.h2
+    initial={{ opacity: 0, y: -30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7 }}
+    viewport={{ once: true }}
+    className="rlp_contact_title"
+  >
+    Get in Touch
+  </motion.h2>
+  <form
+    className="rlp_contact_form"
+    onSubmit={(e) => {
+      e.preventDefault();
+      console.log("Form submitted!");
+    }}
+  >
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      required
+      pattern="^[A-Za-z\s]+$"
+      title="Name should contain only letters and spaces"
+      className="rlp_contact_input"
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      required
+      className="rlp_contact_input"
+    />
+    <input
+      type="tel"
+      name="mobile"
+      placeholder="Mobile Number"
+      required
+      pattern="^[0-9]{10}$"
+      title="Enter a valid 10-digit mobile number"
+      className="rlp_contact_input"
+    />
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      required
+      className="rlp_contact_textarea"
+    />
+    <button type="submit" className="rlp_contact_button">
+      Submit
+    </button>
+  </form>
+</section>
+
     </div>
   );
 }
